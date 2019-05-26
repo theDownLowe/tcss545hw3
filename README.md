@@ -14,7 +14,7 @@ TODO:
         - [ ] Add stored procedures and functions
         - [ ] Add necessary CHECKS
         - [ ] Add FK On Update/Delete
-    - [ ] A script entering 10 records into each table (initial data set)
+    - [X] A script entering 10 records into each table (initial data set)
 - [ ] Well documented source code
 - [ ] Well written readme on how to run/install the application (this file)
 - [ ] Test Cases (A file explaining?)
