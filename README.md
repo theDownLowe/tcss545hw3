@@ -10,7 +10,10 @@ TODO:
     - [ ] ER Model of the Application
     - [ ] Schema of the database normalized to 4NF. Detailed steps of the normalization
 - [ ] A .sql file with the following
-    - [X] The script that implements the normalized DB schema (declares tables, establishes keys, RI/other constraints)
+    - [ ] The script that implements the normalized DB schema (declares tables, establishes keys, RI/other constraints)
+        - [ ] Add stored procedures and functions
+        - [ ] Add necessary CHECKS
+        - [ ] Add FK On Update/Delete
     - [ ] A script entering 10 records into each table (initial data set)
 - [ ] Well documented source code
 - [ ] Well written readme on how to run/install the application (this file)
