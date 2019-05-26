@@ -1,34 +1,32 @@
-
-
 DROP DATABASE IF EXISTS `GroceryStore`;
-CREATE DATABASE IF NOT EXISTS `GroceryStore`;
-USE `Grocery Store`;
+CREATE DATABASE `GroceryStore`;
+USE `GroceryStore`;
 
 -- database schemas
 
 
 -- Customer(CustomerId, Name, Phone, Address, DoB, CustomerSince, RewardPoints)
 CREATE TABLE Customer( 
-  CustomerId    INT NOT NULL PRIMARY KEY, 
+  CustomerId    INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
   Name          VARCHAR(60) NOT NULL, 
   Phone         CHAR(10) NOT NULL, 
   Address       VARCHAR(120) NOT NULL ,
   DoB           Date NOT NULL,
   CustomerSince Date NOT NULL,  
-  RewardPoints  INT DEFAULT 0,
+  RewardPoints  INT DEFAULT 0
 );
 
 
 -- Department(DepartmentId, Name)
 CREATE TABLE Department ( 
-  DepartmentId  INT NOT NULL PRIMARY KEY, 
+  DepartmentId  INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
   Name          VARCHAR(60) NOT NULL 
 );
 
 
 -- Distributor(DistributorId, Name, Phone, Address, PrimaryContactName)
 CREATE TABLE Distributor( 
-  DistributorId       INT NOT NULL PRIMARY KEY, 
+  DistributorId       INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
   Name                VARCHAR (60) NOT NULL, 
   Phone               CHAR(10) NOT NULL, 
   Address             VARCHAR(120) NOT NULL,
@@ -38,13 +36,13 @@ CREATE TABLE Distributor(
 
 -- Inventory(ItemId, Name, Description, DepartmentId, DistributorId, CurrentPrice, InventoryCount)
 CREATE TABLE Inventory( 
-  ItemId           INT  NOT NULL PRIMARY KEY, 
+  ItemId           INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
   Name             VARCHAR(60) NOT NULL, 
   Description      VARCHAR(255) NOT NULL, 
   DepartmentId     INT NOT NULL,
   DistributorId    INT NOT NULL,
   CurrentPrice     DECIMAL(7,2) DEFAULT 0,
-  InventoryCount   INT DEFAULT 0,
+  InventoryCount   INT UNSIGNED DEFAULT 0,
   FOREIGN KEY (DepartmentId) REFERENCES Department(DepartmentId),
   FOREIGN KEY (DistributorId) REFERENCES Distributor(DistributorId)
 );
@@ -52,22 +50,23 @@ CREATE TABLE Inventory(
 
 -- Employee(EmployeeId, Name, Phone, Address, DoB, HireDate, Position, DepartmentId, Salary)
 CREATE TABLE Employee( 
-  EmployeeId    INT  NOT NULL PRIMARY KEY, 
-  Name          VARCHAR(60) NOT NULL, 
-  Phone         CHAR(10) NOT NULL, 
-  Address       VARCHAR(120)	NOT NULL ,
-  DoB           Date NOT NULL, 
-  HireDate      Date NOT NULL,
-  Position      VARCHAR(60) NOT NULL,
-  DepartmentId  INT NOT NULL,
-  Salary        DECIMAL(8,2),
+  EmployeeId    	INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+  Name          	VARCHAR(60) NOT NULL, 
+  Phone         	CHAR(10) NOT NULL, 
+  Address       	VARCHAR(120)	NOT NULL ,
+  DoB           	Date NOT NULL, 
+  HireDate      	Date NOT NULL,
+  Position      	VARCHAR(60) NOT NULL,
+  DepartmentId  	INT NOT NULL,
+  Salary        	DECIMAL(8,2),
+  IsActiveEmployee  BOOLEAN NOT NULL DEFAULT FALSE,
   FOREIGN KEY (DepartmentId) REFERENCES Department(DepartmentId)
 );
 
 
 -- Purchase(PurchaseId, EmployeeId, CustomerId, ItemId, CostPerUnit, Quantity, TotalCost)
 CREATE TABLE Purchase( 
-  PurchaseId    INT NOT NULL PRIMARY KEY, 
+  PurchaseId    INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
   EmployeeId    INT NOT NULL, 
   CustomerId    INT NOT NULL, 
   ItemId        INT NOT NULL,
@@ -76,7 +75,7 @@ CREATE TABLE Purchase(
   TotalCost     DECIMAL(8,2) NOT NULL,
   FOREIGN KEY (EmployeeId) REFERENCES Employee(EmployeeId),
   FOREIGN KEY (CustomerId) REFERENCES Customer(CustomerId),
-  FOREIGN KEY (ItemId) REFERENCES Inventory(InventoryId)
+  FOREIGN KEY (ItemId) REFERENCES Inventory(ItemId)
 );
 
 
@@ -134,23 +133,23 @@ INSERT INTO Inventory VALUES
   (NULL, "Ibuprophen", "100 count 50mg", 8, 8, 4.89, 20),
   (NULL, "Frozen Mac and Cheese Meal", "Family Size", 6, 7, 9.56, 9),
   (NULL, "Ice Cream", "Chocolate Vanilla Swirl", 6, 7, 10.07, 17),
-  (NULL, "Grilled Cheese Sandwich", "Deli fresh sandwich", 10, 10, 5.59),
-  (NULL, "Rose", "Red", 9, 9, 1.22),
-  (NULL, "Magnet", "Seattle Fridge Magnet", 1, 1, 0.99);
+  (NULL, "Grilled Cheese Sandwich", "Deli fresh sandwich", 10, 10, 5.59, 10),
+  (NULL, "Rose", "Red", 9, 9, 1.22, 30),
+  (NULL, "Magnet", "Seattle Fridge Magnet", 1, 1, 0.99, 5);
 
 
 -- Insert 10 rows into Employee
 INSERT INTO Employee VALUES
-  (NULL, "Bilbo Baggins", "4255550001", "1301 1st Ave, Seattle, WA 98101 - APT 101", "1969-05-28", "2008-07-23", "Cashier", 1, 49820),
-  (NULL, "Frodo Baggins", "4255550002", "1301 1st Ave, Seattle, WA 98101 - APT 102", "1970-02-19", "2009-07-28", "Cashier", 1, 49820),
-  (NULL, "Gandalf", "4255550003", "1301 1st Ave, Seattle, WA 98101 - APT 103", "1973-02-08", "2009-08-20", "Courtesy Clerk", 1, 31720), 
-  (NULL, "Samwise Gamgee", "4255550004", "1301 1st Ave, Seattle, WA 98101 - APT 104", "1983-05-10", "2011-01-06", "Manager", 1, 99000),
-  (NULL, "Gollum", "4255550005", "1301 1st Ave, Seattle, WA 98101 - APT 105", "1986-03-25", "2011-01-10", "Produce Clerk", 2, 31720),
-  (NULL, "Aragorn", "4255550006", "1301 1st Ave, Seattle, WA 98101 - APT 106", "1987-12-12", "2012-03-29", "Pharmacist", 8), 120000,
-  (NULL, "Legolas", "4255550007", "1301 1st Ave, Seattle, WA 98101 - APT 107", "1988-08-08", "2012-10-31", "Deli Clerk", 10, 31720),
-  (NULL, "Saruman", "4255550008", "1301 1st Ave, Seattle, WA 98101 - APT 108", "1991-07-12", "2014-02-07", "Floral Clerk", 9, 31720),
-  (NULL, "Sauron", "4255550009", "1301 1st Ave, Seattle, WA 98101 - APT 109", "1994-02-09", "2017-05-23", "Bakery Clerk", 3, 31720),
-  (NULL, "Gimli", "4255550010", "1301 1st Ave, Seattle, WA 98101 - APT 110", "1995-06-02", "2018-10-01", "Frozen Clerk", 6, 31720);
+  (NULL, "Bilbo Baggins", "4255550001", "1301 1st Ave, Seattle, WA 98101 - APT 101", "1969-05-28", "2008-07-23", "Cashier", 1, 49820, TRUE),
+  (NULL, "Frodo Baggins", "4255550002", "1301 1st Ave, Seattle, WA 98101 - APT 102", "1970-02-19", "2009-07-28", "Cashier", 1, 49820, TRUE),
+  (NULL, "Gandalf", "4255550003", "1301 1st Ave, Seattle, WA 98101 - APT 103", "1973-02-08", "2009-08-20", "Courtesy Clerk", 1, 31720, FALSE), 
+  (NULL, "Samwise Gamgee", "4255550004", "1301 1st Ave, Seattle, WA 98101 - APT 104", "1983-05-10", "2011-01-06", "Manager", 1, 99000, TRUE),
+  (NULL, "Gollum", "4255550005", "1301 1st Ave, Seattle, WA 98101 - APT 105", "1986-03-25", "2011-01-10", "Produce Clerk", 2, 31720, TRUE),
+  (NULL, "Aragorn", "4255550006", "1301 1st Ave, Seattle, WA 98101 - APT 106", "1987-12-12", "2012-03-29", "Pharmacist", 8, 120000, TRUE),
+  (NULL, "Legolas", "4255550007", "1301 1st Ave, Seattle, WA 98101 - APT 107", "1988-08-08", "2012-10-31", "Deli Clerk", 10, 31720, TRUE),
+  (NULL, "Saruman", "4255550008", "1301 1st Ave, Seattle, WA 98101 - APT 108", "1991-07-12", "2014-02-07", "Floral Clerk", 9, 31720, TRUE),
+  (NULL, "Sauron", "4255550009", "1301 1st Ave, Seattle, WA 98101 - APT 109", "1994-02-09", "2017-05-23", "Bakery Clerk", 3, 31720, FALSE),
+  (NULL, "Gimli", "4255550010", "1301 1st Ave, Seattle, WA 98101 - APT 110", "1995-06-02", "2018-10-01", "Frozen Clerk", 6, 31720, TRUE);
 
 
 -- Insert 10 rows into Purchase
