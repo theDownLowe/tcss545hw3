@@ -1,6 +1,6 @@
 package edu.tcss545.group10.store.dbmodels;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Customer {
 
@@ -76,5 +76,18 @@ public class Customer {
 
     public void setRewardsPoints(int rewardsPoints) {
         this.rewardsPoints = rewardsPoints;
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "customerId=" + customerId +
+                ", name='" + name + '\'' +
+                ", phone='" + phone + '\'' +
+                ", address='" + address + '\'' +
+                ", dob=" + dob +
+                ", customerSince=" + customerSince +
+                ", rewardsPoints=" + rewardsPoints +
+                '}';
     }
 }

@@ -1,5 +1,7 @@
 package edu.tcss545.group10.store;
 
+import edu.tcss545.group10.store.dbmodels.*;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -33,6 +35,66 @@ public class MySQLConnector {
         }
     }
 
+
+    public void addCustomer(Customer customer) {
+        // TODO
+        String sqlStatement = "INSERT INTO Customer VALUES(NULL, " + customer.getName() + ", " + customer.getPhone() + ", "
+                + customer.getAddress() + ", " + customer.getDob() + ", " + customer.getCustomerSince() + ", "
+                + customer.getRewardsPoints() + ");";
+        System.out.println(sqlStatement);
+        //makeUpdate(sqlStatement);
+    }
+
+    public void updateCustomer(Customer customer) {
+        // TODO - update phone/address
+    }
+
+    public void addDistributor(Distributor distributor) {
+        // TODO
+    }
+
+    public void updateDistributor(Distributor distributor) {
+        // TODO - update phone/address/primary contact name
+    }
+
+    public void addInventoryItem(Inventory inventory) {
+        // TODO
+    }
+
+    public void updateInventoryItem(Inventory inventory) {
+        // TODO - update inventorycount/price of an item
+    }
+
+    public void addEmployee(Employee employee) {
+        // TODO
+    }
+
+    public void updateEmployee(Employee employee) {
+        // TODO - update phone/address/position/department/salary/active status
+    }
+
+    public void addPurchase(Purchase purchase) {
+        // TODO
+    }
+
+    private void makeUpdate(String updateStatement) {
+        try {
+            statement.executeUpdate(updateStatement);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private ResultSet makeQuery(String query) {
+        ResultSet rs = null;
+        try {
+            rs = statement.executeQuery(query);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return rs;
+    }
 
     public void printAllCustomers() {
         try {
