@@ -2,25 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f02cfb9f-88f4-46f0-a431-f4e527ff6be8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/GroceryStoreMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/MySQLConnector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbobjs/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbobjs/Department.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbobjs/Distributor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbobjs/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbobjs/Inventory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbobjs/Purchase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/GroceryStore.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/edu/tcss545/group10/store/GroceryStoreMain.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/edu/tcss545/group10/store/MySQLConnector.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GroceryStore.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryStore.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/GroceryStoreMain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/GroceryStoreMainTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbobjs/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbmodels/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbobjs/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbmodels/Department.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbobjs/Distributor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbmodels/Distributor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbobjs/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbmodels/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbobjs/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbmodels/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbobjs/Purchase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbmodels/Purchase.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,15 +21,6 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/GroceryStoreMain.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
@@ -51,10 +30,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbobjs/Customer.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbmodels/Purchase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+            <state relative-caret-position="374">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+              <folding>
+                <element signature="e#703#704#0" expanded="true" />
+                <element signature="e#736#737#0" expanded="true" />
+                <element signature="e#785#786#0" expanded="true" />
+                <element signature="e#829#830#0" expanded="true" />
+                <element signature="e#863#864#0" expanded="true" />
+                <element signature="e#896#897#0" expanded="true" />
+                <element signature="e#945#946#0" expanded="true" />
+                <element signature="e#989#990#0" expanded="true" />
+                <element signature="e#1023#1024#0" expanded="true" />
+                <element signature="e#1056#1057#0" expanded="true" />
+                <element signature="e#1105#1106#0" expanded="true" />
+                <element signature="e#1144#1145#0" expanded="true" />
+                <element signature="e#1174#1175#0" expanded="true" />
+                <element signature="e#1203#1204#0" expanded="true" />
+                <element signature="e#1244#1245#0" expanded="true" />
+                <element signature="e#1275#1276#0" expanded="true" />
+                <element signature="e#1313#1314#0" expanded="true" />
+                <element signature="e#1347#1348#0" expanded="true" />
+                <element signature="e#1401#1402#0" expanded="true" />
+                <element signature="e#1447#1448#0" expanded="true" />
+                <element signature="e#1479#1480#0" expanded="true" />
+                <element signature="e#1510#1511#0" expanded="true" />
+                <element signature="e#1555#1556#0" expanded="true" />
+                <element signature="e#1595#1596#0" expanded="true" />
+                <element signature="e#1631#1632#0" expanded="true" />
+                <element signature="e#1663#1664#0" expanded="true" />
+                <element signature="e#1713#1714#0" expanded="true" />
+                <element signature="e#1755#1756#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -62,8 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/MySQLConnector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2686">
-              <caret line="158" column="9" lean-forward="true" selection-start-line="158" selection-start-column="9" selection-end-line="158" selection-end-column="9" />
+            <state relative-caret-position="391">
+              <caret line="23" column="41" lean-forward="true" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#576#577#0" expanded="true" />
@@ -92,6 +101,12 @@
         <option value="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/MySQLConnector.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/GroceryStoreMain.java" />
         <option value="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbobjs/Customer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbmodels/Customer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbmodels/Department.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbmodels/Distributor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbmodels/Employee.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbmodels/Inventory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbmodels/Purchase.java" />
       </list>
     </option>
   </component>
@@ -102,8 +117,9 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-25" />
+    <option name="y" value="54" />
     <option name="width" value="1294" />
     <option name="height" value="1407" />
   </component>
@@ -149,6 +165,15 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="store" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="GroceryStore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GroceryStore" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="store" type="462c0819:PsiDirectoryNode" />
+              <item name="dbmodels" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -157,7 +182,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558987855775" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558988654211" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -208,7 +233,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1416" extended-state="6" />
+    <frame x="-25" y="54" width="1294" height="1407" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
@@ -216,7 +241,7 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12241653" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24959481" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
@@ -224,7 +249,7 @@
       <window_info anchor="bottom" id="Messages" weight="0.3289166" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.40997663" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.41287285" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -247,10 +272,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/MySQLConnector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2686">
-          <caret line="158" column="9" lean-forward="true" selection-start-line="158" selection-start-column="9" selection-end-line="158" selection-end-column="9" />
+        <state relative-caret-position="391">
+          <caret line="23" column="41" lean-forward="true" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#576#577#0" expanded="true" />
@@ -259,10 +291,172 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbmodels/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
+        <state relative-caret-position="153">
+          <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding>
+            <element signature="e#696#697#0" expanded="true" />
+            <element signature="e#729#730#0" expanded="true" />
+            <element signature="e#778#779#0" expanded="true" />
+            <element signature="e#822#823#0" expanded="true" />
+            <element signature="e#853#854#0" expanded="true" />
+            <element signature="e#880#881#0" expanded="true" />
+            <element signature="e#920#921#0" expanded="true" />
+            <element signature="e#952#953#0" expanded="true" />
+            <element signature="e#984#985#0" expanded="true" />
+            <element signature="e#1012#1013#0" expanded="true" />
+            <element signature="e#1054#1055#0" expanded="true" />
+            <element signature="e#1088#1089#0" expanded="true" />
+            <element signature="e#1122#1123#0" expanded="true" />
+            <element signature="e#1152#1153#0" expanded="true" />
+            <element signature="e#1198#1199#0" expanded="true" />
+            <element signature="e#1236#1237#0" expanded="true" />
+            <element signature="e#1264#1265#0" expanded="true" />
+            <element signature="e#1290#1291#0" expanded="true" />
+            <element signature="e#1326#1327#0" expanded="true" />
+            <element signature="e#1356#1357#0" expanded="true" />
+            <element signature="e#1394#1395#0" expanded="true" />
+            <element signature="e#1430#1431#0" expanded="true" />
+            <element signature="e#1486#1487#0" expanded="true" />
+            <element signature="e#1536#1537#0" expanded="true" />
+            <element signature="e#1573#1574#0" expanded="true" />
+            <element signature="e#1609#1610#0" expanded="true" />
+            <element signature="e#1664#1665#0" expanded="true" />
+            <element signature="e#1714#1715#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbmodels/Department.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="25" lean-forward="true" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
+          <folding>
+            <element signature="e#291#292#0" expanded="true" />
+            <element signature="e#326#327#0" expanded="true" />
+            <element signature="e#379#380#0" expanded="true" />
+            <element signature="e#427#428#0" expanded="true" />
+            <element signature="e#458#459#0" expanded="true" />
+            <element signature="e#485#486#0" expanded="true" />
+            <element signature="e#525#526#0" expanded="true" />
+            <element signature="e#557#558#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbmodels/Distributor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="e#562#563#0" expanded="true" />
+            <element signature="e#598#599#0" expanded="true" />
+            <element signature="e#653#654#0" expanded="true" />
+            <element signature="e#703#704#0" expanded="true" />
+            <element signature="e#734#735#0" expanded="true" />
+            <element signature="e#761#762#0" expanded="true" />
+            <element signature="e#801#802#0" expanded="true" />
+            <element signature="e#833#834#0" expanded="true" />
+            <element signature="e#865#866#0" expanded="true" />
+            <element signature="e#893#894#0" expanded="true" />
+            <element signature="e#935#936#0" expanded="true" />
+            <element signature="e#969#970#0" expanded="true" />
+            <element signature="e#1003#1004#0" expanded="true" />
+            <element signature="e#1033#1034#0" expanded="true" />
+            <element signature="e#1079#1080#0" expanded="true" />
+            <element signature="e#1117#1118#0" expanded="true" />
+            <element signature="e#1162#1163#0" expanded="true" />
+            <element signature="e#1203#1204#0" expanded="true" />
+            <element signature="e#1271#1272#0" expanded="true" />
+            <element signature="e#1331#1332#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbmodels/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding>
+            <element signature="e#953#954#0" expanded="true" />
+            <element signature="e#986#987#0" expanded="true" />
+            <element signature="e#1035#1036#0" expanded="true" />
+            <element signature="e#1079#1080#0" expanded="true" />
+            <element signature="e#1110#1111#0" expanded="true" />
+            <element signature="e#1137#1138#0" expanded="true" />
+            <element signature="e#1177#1178#0" expanded="true" />
+            <element signature="e#1209#1210#0" expanded="true" />
+            <element signature="e#1241#1242#0" expanded="true" />
+            <element signature="e#1269#1270#0" expanded="true" />
+            <element signature="e#1311#1312#0" expanded="true" />
+            <element signature="e#1345#1346#0" expanded="true" />
+            <element signature="e#1379#1380#0" expanded="true" />
+            <element signature="e#1409#1410#0" expanded="true" />
+            <element signature="e#1455#1456#0" expanded="true" />
+            <element signature="e#1493#1494#0" expanded="true" />
+            <element signature="e#1521#1522#0" expanded="true" />
+            <element signature="e#1547#1548#0" expanded="true" />
+            <element signature="e#1583#1584#0" expanded="true" />
+            <element signature="e#1613#1614#0" expanded="true" />
+            <element signature="e#1646#1647#0" expanded="true" />
+            <element signature="e#1677#1678#0" expanded="true" />
+            <element signature="e#1723#1724#0" expanded="true" />
+            <element signature="e#1763#1764#0" expanded="true" />
+            <element signature="e#1798#1799#0" expanded="true" />
+            <element signature="e#1829#1830#0" expanded="true" />
+            <element signature="e#1877#1878#0" expanded="true" />
+            <element signature="e#1917#1918#0" expanded="true" />
+            <element signature="e#1953#1954#0" expanded="true" />
+            <element signature="e#1988#1989#0" expanded="true" />
+            <element signature="e#2041#2042#0" expanded="true" />
+            <element signature="e#2089#2090#0" expanded="true" />
+            <element signature="e#2122#2123#0" expanded="true" />
+            <element signature="e#2151#2152#0" expanded="true" />
+            <element signature="e#2195#2196#0" expanded="true" />
+            <element signature="e#2231#2232#0" expanded="true" />
+            <element signature="e#2272#2273#0" expanded="true" />
+            <element signature="e#2311#2312#0" expanded="true" />
+            <element signature="e#2372#2373#0" expanded="true" />
+            <element signature="e#2421#2422#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbmodels/Inventory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+          <folding>
+            <element signature="e#750#751#0" expanded="true" />
+            <element signature="e#779#780#0" expanded="true" />
+            <element signature="e#820#821#0" expanded="true" />
+            <element signature="e#856#857#0" expanded="true" />
+            <element signature="e#887#888#0" expanded="true" />
+            <element signature="e#914#915#0" expanded="true" />
+            <element signature="e#954#955#0" expanded="true" />
+            <element signature="e#986#987#0" expanded="true" />
+            <element signature="e#1024#1025#0" expanded="true" />
+            <element signature="e#1058#1059#0" expanded="true" />
+            <element signature="e#1112#1113#0" expanded="true" />
+            <element signature="e#1158#1159#0" expanded="true" />
+            <element signature="e#1194#1195#0" expanded="true" />
+            <element signature="e#1229#1230#0" expanded="true" />
+            <element signature="e#1282#1283#0" expanded="true" />
+            <element signature="e#1330#1331#0" expanded="true" />
+            <element signature="e#1367#1368#0" expanded="true" />
+            <element signature="e#1403#1404#0" expanded="true" />
+            <element signature="e#1458#1459#0" expanded="true" />
+            <element signature="e#1508#1509#0" expanded="true" />
+            <element signature="e#1547#1548#0" expanded="true" />
+            <element signature="e#1582#1583#0" expanded="true" />
+            <element signature="e#1638#1639#0" expanded="true" />
+            <element signature="e#1686#1687#0" expanded="true" />
+            <element signature="e#1724#1725#0" expanded="true" />
+            <element signature="e#1761#1762#0" expanded="true" />
+            <element signature="e#1818#1819#0" expanded="true" />
+            <element signature="e#1870#1871#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -273,45 +467,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbobjs/Distributor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbmodels/Purchase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbobjs/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbobjs/Inventory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbobjs/Purchase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbobjs/Department.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbobjs/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+        <state relative-caret-position="374">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="e#703#704#0" expanded="true" />
+            <element signature="e#736#737#0" expanded="true" />
+            <element signature="e#785#786#0" expanded="true" />
+            <element signature="e#829#830#0" expanded="true" />
+            <element signature="e#863#864#0" expanded="true" />
+            <element signature="e#896#897#0" expanded="true" />
+            <element signature="e#945#946#0" expanded="true" />
+            <element signature="e#989#990#0" expanded="true" />
+            <element signature="e#1023#1024#0" expanded="true" />
+            <element signature="e#1056#1057#0" expanded="true" />
+            <element signature="e#1105#1106#0" expanded="true" />
+            <element signature="e#1144#1145#0" expanded="true" />
+            <element signature="e#1174#1175#0" expanded="true" />
+            <element signature="e#1203#1204#0" expanded="true" />
+            <element signature="e#1244#1245#0" expanded="true" />
+            <element signature="e#1275#1276#0" expanded="true" />
+            <element signature="e#1313#1314#0" expanded="true" />
+            <element signature="e#1347#1348#0" expanded="true" />
+            <element signature="e#1401#1402#0" expanded="true" />
+            <element signature="e#1447#1448#0" expanded="true" />
+            <element signature="e#1479#1480#0" expanded="true" />
+            <element signature="e#1510#1511#0" expanded="true" />
+            <element signature="e#1555#1556#0" expanded="true" />
+            <element signature="e#1595#1596#0" expanded="true" />
+            <element signature="e#1631#1632#0" expanded="true" />
+            <element signature="e#1663#1664#0" expanded="true" />
+            <element signature="e#1713#1714#0" expanded="true" />
+            <element signature="e#1755#1756#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
