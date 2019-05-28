@@ -4,6 +4,7 @@ import edu.tcss545.group10.store.dbmodels.*;
 
 import java.sql.ResultSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class GroceryStoreAPI {
 
@@ -28,13 +29,41 @@ public class GroceryStoreAPI {
     }
 
     public Set<Customer> getCustomers() {
-        // TODO
-        return null;
+        Set<Customer> customers = new TreeSet<Customer>();
+
+        try {
+            ResultSet rs = makeQuery("SELECT * FROM Customer");
+
+            while (rs.next()) {
+                Customer customer = new Customer(rs.getInt(1), rs.getString(2),
+                        rs.getString(3), rs.getString(4),
+                        rs.getDate(5), rs.getDate(6), rs.getInt(7));
+
+                customers.add(customer);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return customers;
     }
 
     public Set<Department> getDepartments() {
-        // TODO
-        return null;
+        Set<Department> departments = new TreeSet<Department>();
+
+        try {
+            ResultSet rs = makeQuery("SELECT * FROM Department");
+
+            while (rs.next()) {
+                Department department = new Department(rs.getInt(1), rs.getString(2));
+
+                departments.add(department);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return departments;
     }
 
     public void addDistributor(Distributor distributor) {
@@ -52,8 +81,22 @@ public class GroceryStoreAPI {
     }
 
     public Set<Distributor> getDistributors() {
-        // TODO
-        return null;
+        Set<Distributor> distributors = new TreeSet<Distributor>();
+
+        try {
+            ResultSet rs = makeQuery("SELECT * FROM Distributor");
+
+            while (rs.next()) {
+                Distributor distributor = new Distributor(rs.getInt(1), rs.getString(2),
+                        rs.getString(3), rs.getString(4), rs.getString(5));
+
+                distributors.add(distributor);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return distributors;
     }
 
     public void addInventoryItem(Inventory inventory) {
@@ -70,9 +113,24 @@ public class GroceryStoreAPI {
         makeUpdate(sqlStatement);
     }
 
-    public Set<Inventory> getInventory() {
-        // TODO
-        return null;
+    public Set<Inventory> getInventories() {
+        Set<Inventory> inventories = new TreeSet<Inventory>();
+
+        try {
+            ResultSet rs = makeQuery("SELECT * FROM Inventory");
+
+            while (rs.next()) {
+                Inventory inventory = new Inventory(rs.getInt(1), rs.getString(2),
+                        rs.getString(3), rs.getInt(4), rs.getInt(5),
+                        rs.getDouble(6), rs.getInt(7));
+
+                inventories.add(inventory);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return inventories;
     }
 
     public void addEmployee(Employee employee) {
@@ -92,8 +150,24 @@ public class GroceryStoreAPI {
     }
 
     public Set<Employee> getEmployees() {
-        // TODO
-        return null;
+        Set<Employee> employees = new TreeSet<Employee>();
+
+        try {
+            ResultSet rs = makeQuery("SELECT * FROM Employee");
+
+            while (rs.next()) {
+                Employee employee = new Employee(rs.getInt(1), rs.getString(2),
+                        rs.getString(3), rs.getString(4), rs.getDate(5),
+                        rs.getDate(6), rs.getString(7),  rs.getInt(8),
+                        rs.getDouble(9),  rs.getBoolean(10));
+
+                employees.add(employee);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return employees;
     }
 
     public void addPurchase(Purchase purchase) {
@@ -104,8 +178,23 @@ public class GroceryStoreAPI {
     }
 
     public Set<Purchase> getPurchases() {
-        // TODO
-        return null;
+        Set<Purchase> purchases = new TreeSet<Purchase>();
+
+        try {
+            ResultSet rs = makeQuery("SELECT * FROM Purchase");
+
+            while (rs.next()) {
+                Purchase purchase = new Purchase(rs.getInt(1), rs.getInt(2),
+                        rs.getInt(3), rs.getInt(4), rs.getDouble(5),
+                        rs.getInt(6), rs.getDouble(7));
+
+                purchases.add(purchase);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return purchases;
     }
 
     public void printAllCustomers() {
@@ -118,8 +207,8 @@ public class GroceryStoreAPI {
                                 rs.getString(2) + " | " +
                                 rs.getString(3) + " | " +
                                 rs.getString(4) + " | " +
-                                rs.getString(5) + " | " +
-                                rs.getString(6) + " | " +
+                                rs.getDate(5) + " | " +
+                                rs.getDate(6) + " | " +
                                 rs.getInt(7));
             }
         } catch (Exception e) {
@@ -168,8 +257,8 @@ public class GroceryStoreAPI {
                                 rs.getString(2) + " | " +
                                 rs.getString(3) + " | " +
                                 rs.getString(4) + " | " +
-                                rs.getString(5) + " | " +
-                                rs.getString(6) + " | " +
+                                rs.getDate(5) + " | " +
+                                rs.getDate(6) + " | " +
                                 rs.getString(7) + " | " +
                                 rs.getInt(8) + " | " +
                                 rs.getDouble(9) + " | " +
