@@ -8,27 +8,23 @@ import java.util.TreeSet;
 
 public class GroceryStoreAPI {
 
-    private MySQLConnector con;
+    private static MySQLConnector con = new MySQLConnector();
 
-    public GroceryStoreAPI() {
-        this.con = new MySQLConnector();
-    }
-
-    public void addCustomer(Customer customer) {
+    public static void addCustomer(Customer customer) {
         String sqlStatement = "INSERT INTO Customer VALUES(NULL, " + customer.getName() + ", "
                 + customer.getPhone() + ", " + customer.getAddress() + ", " + customer.getDob()
                 + ", " + customer.getCustomerSince() + ", " + customer.getRewardsPoints() + ");";
         makeUpdate(sqlStatement);
     }
 
-    public void updateCustomer(Customer customer) {
+    public static void updateCustomer(Customer customer) {
         String sqlStatement = "UPDATE Customer SET Phone = " + customer.getPhone()
                 + ", Address = " + customer.getAddress() + " WHERE CustomerId = "
                 + customer.getCustomerId() + ";";
         makeUpdate(sqlStatement);
     }
 
-    public Set<Customer> getCustomers() {
+    public static Set<Customer> getCustomers() {
         Set<Customer> customers = new TreeSet<Customer>();
 
         try {
@@ -48,7 +44,7 @@ public class GroceryStoreAPI {
         return customers;
     }
 
-    public Set<Department> getDepartments() {
+    public static Set<Department> getDepartments() {
         Set<Department> departments = new TreeSet<Department>();
 
         try {
@@ -66,7 +62,7 @@ public class GroceryStoreAPI {
         return departments;
     }
 
-    public void addDistributor(Distributor distributor) {
+    public static void addDistributor(Distributor distributor) {
         String sqlStatement = "INSERT INTO Distributor VALUES (NULL, " + distributor.getName() + ", "
                 + distributor.getPhone() + ", " + distributor.getAddress() + ", "
                 + distributor.getPrimaryContactName() + ");";
@@ -80,7 +76,7 @@ public class GroceryStoreAPI {
         makeUpdate(sqlStatement);
     }
 
-    public Set<Distributor> getDistributors() {
+    public static Set<Distributor> getDistributors() {
         Set<Distributor> distributors = new TreeSet<Distributor>();
 
         try {
@@ -99,7 +95,7 @@ public class GroceryStoreAPI {
         return distributors;
     }
 
-    public void addInventoryItem(Inventory inventory) {
+    public static void addInventoryItem(Inventory inventory) {
         String sqlStatement = "INSERT INTO Inventory VALUES (NULL, " + inventory.getName() + ", "
                 + inventory.getDescription() + ", " + inventory.getDepartmentId() + ", "
                 + inventory.getDistributorId() + ", " + inventory.getCurrentPrice() + ", "
@@ -107,14 +103,14 @@ public class GroceryStoreAPI {
         makeUpdate(sqlStatement);
     }
 
-    public void updateInventoryItem(Inventory inventory) {
+    public static void updateInventoryItem(Inventory inventory) {
         String sqlStatement = "UPDATE Inventory SET CurrentPrice = " + inventory.getCurrentPrice()
                 + ", InventoryCount = " + inventory.getInventoryCount() + ";";
         makeUpdate(sqlStatement);
     }
 
-    public Set<Inventory> getInventories() {
-        Set<Inventory> inventories = new TreeSet<Inventory>();
+    public static Set<Inventory> getInventoryItems() {
+        Set<Inventory> inventoryItems = new TreeSet<Inventory>();
 
         try {
             ResultSet rs = makeQuery("SELECT * FROM Inventory");
@@ -124,16 +120,16 @@ public class GroceryStoreAPI {
                         rs.getString(3), rs.getInt(4), rs.getInt(5),
                         rs.getDouble(6), rs.getInt(7));
 
-                inventories.add(inventory);
+                inventoryItems.add(inventory);
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        return inventories;
+        return inventoryItems;
     }
 
-    public void addEmployee(Employee employee) {
+    public static void addEmployee(Employee employee) {
         String sqlStatement = "INSERT INTO Employee VALUES (NULL, " + employee.getName() + ", "
                 + employee.getPhone() + ", " + employee.getAddress() + ", " + employee.getDob()
                 + ", " + employee.getHireDate() + ", " + employee.getPosition() + ", "
@@ -141,7 +137,7 @@ public class GroceryStoreAPI {
         makeUpdate(sqlStatement);
     }
 
-    public void updateEmployee(Employee employee) {
+    public static void updateEmployee(Employee employee) {
         String sqlStatement = "UPDATE Employee SET Phone = " + employee.getPhone()
                 + ", Address = " + employee.getAddress() + ", Position = " + employee.getPosition()
                 + ", Department = " + employee.getDepartmentId() + ", Salary = " + employee.getSalary()
@@ -149,7 +145,7 @@ public class GroceryStoreAPI {
         makeUpdate(sqlStatement);
     }
 
-    public Set<Employee> getEmployees() {
+    public static Set<Employee> getEmployees() {
         Set<Employee> employees = new TreeSet<Employee>();
 
         try {
@@ -170,14 +166,14 @@ public class GroceryStoreAPI {
         return employees;
     }
 
-    public void addPurchase(Purchase purchase) {
+    public static void addPurchase(Purchase purchase) {
         String sqlStatement = "INSERT INTO Purchase VALUES (NULL, " + purchase.getEmployeeId()
                 + ", " + purchase.getCustomerId() + ", " + purchase.getItemId() + ", "
                 + purchase.getCostPerUnit() + ", " + purchase.getQuantity() + ", " + purchase.getTotalCost() + ");";
         makeUpdate(sqlStatement);
     }
 
-    public Set<Purchase> getPurchases() {
+    public static Set<Purchase> getPurchases() {
         Set<Purchase> purchases = new TreeSet<Purchase>();
 
         try {
@@ -197,7 +193,7 @@ public class GroceryStoreAPI {
         return purchases;
     }
 
-    public void printAllCustomers() {
+    public static void printAllCustomers() {
         try {
             ResultSet rs = makeQuery("SELECT * FROM Customer");
 
@@ -216,7 +212,7 @@ public class GroceryStoreAPI {
         }
     }
 
-    public void printAllDepartments() {
+    public static void printAllDepartments() {
         try {
             ResultSet rs = makeQuery("SELECT * FROM Department");
 
@@ -228,9 +224,9 @@ public class GroceryStoreAPI {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
+}
 
-    public void printAllDistributors() {
+    public static void printAllDistributors() {
         try {
             ResultSet rs = makeQuery("SELECT * FROM Distributor");
 
@@ -247,7 +243,7 @@ public class GroceryStoreAPI {
         }
     }
 
-    public void printAllEmployees() {
+    public static void printAllEmployees() {
         try {
             ResultSet rs = makeQuery("SELECT * FROM Employee");
 
@@ -269,7 +265,7 @@ public class GroceryStoreAPI {
         }
     }
 
-    public void printAllInventory() {
+    public static void printAllInventory() {
         try {
             ResultSet rs = makeQuery("SELECT * FROM Inventory");
 
@@ -288,7 +284,7 @@ public class GroceryStoreAPI {
         }
     }
 
-    public void printAllPurchases() {
+    public static void printAllPurchases() {
         try {
             ResultSet rs = makeQuery("SELECT * FROM Purchase");
 
@@ -307,7 +303,7 @@ public class GroceryStoreAPI {
         }
     }
 
-    public void resetDatabase() {
+    public static void resetDatabase() {
         try {
             makeQuery("CALL resetGroceryStoreDB()");
             System.out.println("Database has been reset");
@@ -316,12 +312,12 @@ public class GroceryStoreAPI {
         }
     }
 
-    private void makeUpdate(String sqlStatement) {
+    private static void makeUpdate(String sqlStatement) {
         System.out.println("Executing MySQL statement: " + sqlStatement);
         con.makeUpdate(sqlStatement);
     }
 
-    private ResultSet makeQuery(String sqlStatement) {
+    private static ResultSet makeQuery(String sqlStatement) {
         System.out.println("Executing MySQL statement: " + sqlStatement);
         return con.makeQuery(sqlStatement);
     }

@@ -1,2 +1,6 @@
 # Workspace files
-.idea/workspace.xml
+.idea/
+
+# Target folders
+target/
+
