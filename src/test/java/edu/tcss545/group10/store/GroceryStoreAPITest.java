@@ -8,7 +8,7 @@ public class GroceryStoreAPITest {
     @BeforeEach
     void init() {
         System.out.println("Resetting DB");
-        //GroceryStoreAPI.resetDatabase();
+        GroceryStoreAPI.resetDatabase();
     }
 
     @Test

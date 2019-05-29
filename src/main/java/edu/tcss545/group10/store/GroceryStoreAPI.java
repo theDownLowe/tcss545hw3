@@ -11,9 +11,9 @@ public class GroceryStoreAPI {
     private static MySQLConnector con = new MySQLConnector();
 
     public static void addCustomer(Customer customer) {
-        String sqlStatement = "INSERT INTO Customer VALUES(NULL, " + customer.getName() + ", "
-                + customer.getPhone() + ", " + customer.getAddress() + ", " + customer.getDob()
-                + ", " + customer.getCustomerSince() + ", " + customer.getRewardsPoints() + ");";
+        String sqlStatement = "INSERT INTO Customer VALUES(NULL, \"" + customer.getName() + "\", \""
+                + customer.getPhone() + "\", \"" + customer.getAddress() + "\", \"" + customer.getDob()
+                + "\", \"" + customer.getCustomerSince() + "\", " + customer.getRewardsPoints() + ");";
         makeUpdate(sqlStatement);
     }
 
@@ -131,8 +131,8 @@ public class GroceryStoreAPI {
 
     public static void addEmployee(Employee employee) {
         String sqlStatement = "INSERT INTO Employee VALUES (NULL, " + employee.getName() + ", "
-                + employee.getPhone() + ", " + employee.getAddress() + ", " + employee.getDob()
-                + ", " + employee.getHireDate() + ", " + employee.getPosition() + ", "
+                + employee.getPhone() + ", " + employee.getAddress() + ", '" + employee.getDob()
+                + "', '" + employee.getHireDate() + "', " + employee.getPosition() + ", "
                 + employee.getDepartmentId() + ", " + employee.getSalary() + ", " + employee.isActiveEmployee() + ");";
         makeUpdate(sqlStatement);
     }
