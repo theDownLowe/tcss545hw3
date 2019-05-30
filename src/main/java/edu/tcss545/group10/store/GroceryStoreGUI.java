@@ -1,14 +1,13 @@
 package edu.tcss545.group10.store;
 
-import edu.tcss545.group10.store.dbmodels.*;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Set;
 
 public class GroceryStoreGUI {
+
+    private static final String GC_ICON_LOCATION = "src/main/resources/grocery-icon.png";
 
     private static JFrame frame;
 
@@ -30,10 +29,22 @@ public class GroceryStoreGUI {
         // Initialize JFrame
         frame = new JFrame("Grocery Store");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(700, 800);
+        frame.setSize(700, 650);
         frame.setLocationRelativeTo(null);
+        ImageIcon img = new ImageIcon(GC_ICON_LOCATION);
+        frame.setIconImage(img.getImage());
 
-        refreshData();
+        //refreshData();
+
+        // Refresh Table Button
+        JButton refreshButton = new JButton("Refresh Data");
+        refreshButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                refreshTables();
+            }
+        });
+        frame.add(refreshButton, BorderLayout.NORTH);
+
         addTabs();
 
         frame.setVisible(true);
@@ -50,11 +61,14 @@ public class GroceryStoreGUI {
         addPurchaseTab(tabbedPane);
         addDepartmentTab(tabbedPane);
 
-        frame.add(tabbedPane);
+        frame.add(tabbedPane, BorderLayout.CENTER);
     }
 
     private static void addHomeTab(JTabbedPane tabbedPane) {
         JComponent homePanel = new JPanel();
+        JLabel homeLabel = new JLabel("Welcome to the Grocery Store Data Administrator Application!");
+        homePanel.add(homeLabel);
+
         tabbedPane.add("Home", homePanel);
     }
 
@@ -69,16 +83,23 @@ public class GroceryStoreGUI {
         scrollPane.setPreferredSize(new Dimension(650, 500));
         customerPanel.add(scrollPane);
 
-        JButton refreshButton = new JButton("Refresh");
-        refreshButton.addActionListener(new ActionListener() {
+        // Add Customer Button
+        JButton addCustomerButton = new JButton("Add Customer");
+        addCustomerButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                refreshTables();
+                openAddCustomerForm();
             }
         });
-        customerPanel.add(refreshButton);
+        customerPanel.add(addCustomerButton);
 
-        // TODO - Add new customer forms
-        // TODO - Update customer forms
+        // Update Customer Button
+        JButton updateCustomerButton = new JButton("Update Customer");
+        updateCustomerButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                openUpdateCustomerForm();
+            }
+        });
+        customerPanel.add(updateCustomerButton);
 
         tabbedPane.add("Customers", customerPanel);
     }
@@ -94,16 +115,23 @@ public class GroceryStoreGUI {
         scrollPane.setPreferredSize(new Dimension(650, 500));
         distributorPanel.add(scrollPane);
 
-        JButton refreshButton = new JButton("Refresh");
-        refreshButton.addActionListener(new ActionListener() {
+        // Add Distributor Button
+        JButton addDistributorButton = new JButton("Add Distributor");
+        addDistributorButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                refreshTables();
+                openAddDistributorForm();
             }
         });
-        distributorPanel.add(refreshButton);
+        distributorPanel.add(addDistributorButton);
 
-        // TODO - Add distributor forms
-        // TODO - Update distributor forms
+        // Update Distributor Button
+        JButton updateDistributorButton = new JButton("Update Distributor");
+        updateDistributorButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                openUpdateDistributorForm();
+            }
+        });
+        distributorPanel.add(updateDistributorButton);
 
         tabbedPane.add("Distributors", distributorPanel);
     }
@@ -120,16 +148,23 @@ public class GroceryStoreGUI {
         scrollPane.setPreferredSize(new Dimension(650, 500));
         employeePanel.add(scrollPane);
 
-        JButton refreshButton = new JButton("Refresh");
-        refreshButton.addActionListener(new ActionListener() {
+        // Add Employee Button
+        JButton addEmployeeButton = new JButton("Add Employee");
+        addEmployeeButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                refreshTables();
+                openAddEmployeeForm();
             }
         });
-        employeePanel.add(refreshButton);
+        employeePanel.add(addEmployeeButton);
 
-        // TODO - Add employee forms
-        // TODO - Update employee forms
+        // Update Employee Button
+        JButton updateEmployeeButton = new JButton("Update Employee");
+        updateEmployeeButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                openUpdateEmployeeForm();
+            }
+        });
+        employeePanel.add(updateEmployeeButton);
 
         tabbedPane.add("Employees", employeePanel);
     }
@@ -146,16 +181,23 @@ public class GroceryStoreGUI {
         scrollPane.setPreferredSize(new Dimension(650, 500));
         inventoryPanel.add(scrollPane);
 
-        JButton refreshButton = new JButton("Refresh");
-        refreshButton.addActionListener(new ActionListener() {
+        // Add Inventory Button
+        JButton addInventoryButton = new JButton("Add Inventory");
+        addInventoryButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                refreshTables();
+                openAddInventoryForm();
             }
         });
-        inventoryPanel.add(refreshButton);
+        inventoryPanel.add(addInventoryButton);
 
-        // TODO - Add inventory forms
-        // TODO - Update inventory forms
+        // Update Inventory Button
+        JButton updateInventoryButton = new JButton("Update Inventory");
+        updateInventoryButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                openUpdateInventoryForm();
+            }
+        });
+        inventoryPanel.add(updateInventoryButton);
 
         tabbedPane.add("Inventory Items", inventoryPanel);
     }
@@ -171,15 +213,14 @@ public class GroceryStoreGUI {
         scrollPane.setPreferredSize(new Dimension(650, 500));
         purchasePanel.add(scrollPane);
 
-        JButton refreshButton = new JButton("Refresh");
-        refreshButton.addActionListener(new ActionListener() {
+        // Add Purchase Button
+        JButton addPurchaseButton = new JButton("Add Purchase");
+        addPurchaseButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                refreshTables();
+                openAddPurchaseForm();
             }
         });
-        purchasePanel.add(refreshButton);
-
-        // TODO - Add purchase form
+        purchasePanel.add(addPurchaseButton);
 
         tabbedPane.add("Purchases", purchasePanel);
     }
@@ -194,14 +235,6 @@ public class GroceryStoreGUI {
         JScrollPane scrollPane = new JScrollPane(departmentTable);
         scrollPane.setPreferredSize(new Dimension(650, 500));
         departmentPanel.add(scrollPane);
-
-        JButton refreshButton = new JButton("Refresh");
-        refreshButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                refreshTables();
-            }
-        });
-        departmentPanel.add(refreshButton);
 
         tabbedPane.add("Departments", departmentPanel);
     }
@@ -223,5 +256,212 @@ public class GroceryStoreGUI {
         inventoryTable.validate();
         purchaseTable.validate();
         departmentTable.validate();
+    }
+
+    private static void openAddCustomerForm() {
+        final JDialog dialog = new JDialog(frame, true);
+        dialog.setSize(500, 300);
+        dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+        dialog.setTitle("Add Customer Form");
+        dialog.setLocationRelativeTo(null);
+
+        JLabel label = new JLabel("Fill out the form...");
+        dialog.add(label, BorderLayout.NORTH);
+
+        // Add Submit Button
+        JButton submitButton = new JButton("Submit");
+        submitButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                dialog.dispose();
+                //GroceryStoreAPI.addCustomer();
+                //refreshTables();
+            }
+        });
+        dialog.add(submitButton, BorderLayout.SOUTH);
+        dialog.setVisible(true);
+    }
+
+    private static void openUpdateCustomerForm() {
+        final JDialog dialog = new JDialog(frame, true);
+        dialog.setSize(500, 300);
+        dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+        dialog.setTitle("Update Customer Form");
+        dialog.setLocationRelativeTo(null);
+
+        JLabel label = new JLabel("Fill out the form...");
+        dialog.add(label, BorderLayout.NORTH);
+
+        // Add Submit Button
+        JButton submitButton = new JButton("Submit");
+        submitButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                dialog.dispose();
+                //GroceryStoreAPI.updateCustomer();
+                //refreshTables();
+            }
+        });
+        dialog.add(submitButton, BorderLayout.SOUTH);
+        dialog.setVisible(true);
+    }
+
+    private static void openAddDistributorForm() {
+        final JDialog dialog = new JDialog(frame, true);
+        dialog.setSize(500, 300);
+        dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+        dialog.setTitle("Add Distributor Form");
+        dialog.setLocationRelativeTo(null);
+
+        JLabel label = new JLabel("Fill out the form...");
+        dialog.add(label, BorderLayout.NORTH);
+
+        // Add Submit Button
+        JButton submitButton = new JButton("Submit");
+        submitButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                dialog.dispose();
+                //GroceryStoreAPI.addDistributor();
+                //refreshTables();
+            }
+        });
+        dialog.add(submitButton, BorderLayout.SOUTH);
+        dialog.setVisible(true);
+    }
+
+    private static void openUpdateDistributorForm() {
+        final JDialog dialog = new JDialog(frame, true);
+        dialog.setSize(500, 300);
+        dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+        dialog.setTitle("Update Distributor Form");
+        dialog.setLocationRelativeTo(null);
+
+        JLabel label = new JLabel("Fill out the form...");
+        dialog.add(label, BorderLayout.NORTH);
+
+        // Add Submit Button
+        JButton submitButton = new JButton("Submit");
+        submitButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                dialog.dispose();
+                //GroceryStoreAPI.updateDistributor();
+                //refreshTables();
+            }
+        });
+        dialog.add(submitButton, BorderLayout.SOUTH);
+        dialog.setVisible(true);
+    }
+
+    private static void openAddEmployeeForm() {
+        final JDialog dialog = new JDialog(frame, true);
+        dialog.setSize(500, 300);
+        dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+        dialog.setTitle("Add Employee Form");
+        dialog.setLocationRelativeTo(null);
+
+        JLabel label = new JLabel("Fill out the form...");
+        dialog.add(label, BorderLayout.NORTH);
+
+        // Add Submit Button
+        JButton submitButton = new JButton("Submit");
+        submitButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                dialog.dispose();
+                //GroceryStoreAPI.addEmployee();
+                //refreshTables();
+            }
+        });
+        dialog.add(submitButton, BorderLayout.SOUTH);
+        dialog.setVisible(true);
+    }
+
+    private static void openUpdateEmployeeForm() {
+        final JDialog dialog = new JDialog(frame, true);
+        dialog.setSize(500, 300);
+        dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+        dialog.setTitle("Update Employee Form");
+        dialog.setLocationRelativeTo(null);
+
+        JLabel label = new JLabel("Fill out the form...");
+        dialog.add(label, BorderLayout.NORTH);
+
+        // Add Submit Button
+        JButton submitButton = new JButton("Submit");
+        submitButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                dialog.dispose();
+                //GroceryStoreAPI.updateEmployee();
+                //refreshTables();
+            }
+        });
+        dialog.add(submitButton, BorderLayout.SOUTH);
+        dialog.setVisible(true);
+    }
+
+    private static void openAddInventoryForm() {
+        final JDialog dialog = new JDialog(frame, true);
+        dialog.setSize(500, 300);
+        dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+        dialog.setTitle("Add Inventory Form");
+        dialog.setLocationRelativeTo(null);
+
+        JLabel label = new JLabel("Fill out the form...");
+        dialog.add(label, BorderLayout.NORTH);
+
+        // Add Submit Button
+        JButton submitButton = new JButton("Submit");
+        submitButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                dialog.dispose();
+                //GroceryStoreAPI.addInventory();
+                //refreshTables();
+            }
+        });
+        dialog.add(submitButton, BorderLayout.SOUTH);
+        dialog.setVisible(true);
+    }
+
+    private static void openUpdateInventoryForm() {
+        final JDialog dialog = new JDialog(frame, true);
+        dialog.setSize(500, 300);
+        dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+        dialog.setTitle("Update Inventory Form");
+        dialog.setLocationRelativeTo(null);
+
+        JLabel label = new JLabel("Fill out the form...");
+        dialog.add(label, BorderLayout.NORTH);
+
+        // Add Submit Button
+        JButton submitButton = new JButton("Submit");
+        submitButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                dialog.dispose();
+                //GroceryStoreAPI.updateInventory();
+                //refreshTables();
+            }
+        });
+        dialog.add(submitButton, BorderLayout.SOUTH);
+        dialog.setVisible(true);
+    }
+
+    private static void openAddPurchaseForm() {
+        final JDialog dialog = new JDialog(frame, true);
+        dialog.setSize(500, 300);
+        dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+        dialog.setTitle("Add Purchase Form");
+        dialog.setLocationRelativeTo(null);
+
+        JLabel label = new JLabel("Fill out the form...");
+        dialog.add(label, BorderLayout.NORTH);
+
+        // Add Submit Button
+        JButton submitButton = new JButton("Submit");
+        submitButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                dialog.dispose();
+                //GroceryStoreAPI.addPurchase();
+                //refreshTables();
+            }
+        });
+        dialog.add(submitButton, BorderLayout.SOUTH);
+        dialog.setVisible(true);
     }
 }
