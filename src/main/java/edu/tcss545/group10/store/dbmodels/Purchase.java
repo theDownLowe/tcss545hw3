@@ -4,8 +4,8 @@ public class Purchase {
 
     private int purchaseId;
     private int employeeId;
-    private int CustomerId;
-    private int ItemId;
+    private int customerId;
+    private int itemId;
     private double costPerUnit;
     private int quantity;
     private double totalCost;
@@ -14,8 +14,8 @@ public class Purchase {
                     double costPerUnit, int quantity, double totalCost) {
         this.purchaseId = purchaseId;
         this.employeeId = employeeId;
-        CustomerId = customerId;
-        ItemId = itemId;
+        customerId = customerId;
+        itemId = itemId;
         this.costPerUnit = costPerUnit;
         this.quantity = quantity;
         this.totalCost = totalCost;
@@ -38,19 +38,19 @@ public class Purchase {
     }
 
     public int getCustomerId() {
-        return CustomerId;
+        return customerId;
     }
 
     public void setCustomerId(int customerId) {
-        CustomerId = customerId;
+        customerId = customerId;
     }
 
     public int getItemId() {
-        return ItemId;
+        return itemId;
     }
 
     public void setItemId(int itemId) {
-        ItemId = itemId;
+        itemId = itemId;
     }
 
     public double getCostPerUnit() {

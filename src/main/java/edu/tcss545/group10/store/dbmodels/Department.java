@@ -1,6 +1,6 @@
 package edu.tcss545.group10.store.dbmodels;
 
-public class Department {
+public class Department implements Comparable<Department>{
 
     private int departmentId;
     private String name;
@@ -24,5 +24,9 @@ public class Department {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int compareTo(Department other) {
+        return this.departmentId > other.departmentId ? 1 : -1;
     }
 }

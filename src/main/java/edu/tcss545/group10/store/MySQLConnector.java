@@ -1,9 +1,6 @@
 package edu.tcss545.group10.store;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 
 public class MySQLConnector {
 
@@ -13,7 +10,7 @@ public class MySQLConnector {
     private static final String MYSQL_DB_PASSWORD = "tcss545a";
 
     private Connection mySQLConnection;
-    private Statement statement;
+    private PreparedStatement statement;
 
 
     public MySQLConnector () {
@@ -22,11 +19,11 @@ public class MySQLConnector {
 
 
     public void makeUpdate(String updateStatement) {
-        // TODO - may need to replace Statement with PreparedStatement here
         try {
             initializeConnection();
-            statement.executeUpdate(updateStatement);
-            closeConnection();
+            statement = mySQLConnection.prepareStatement(updateStatement);
+            statement.executeUpdate();
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -37,8 +34,8 @@ public class MySQLConnector {
         ResultSet rs = null;
         try {
             initializeConnection();
+            statement = mySQLConnection.prepareStatement(query);
             rs = statement.executeQuery(query);
-            closeConnection();
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -52,9 +49,8 @@ public class MySQLConnector {
         try {
             Class.forName(SQL_DRIVER_NAME);
             mySQLConnection = DriverManager.getConnection(MYSQL_DB_NAME, MYSQL_DB_USERNAME, MYSQL_DB_PASSWORD);
-            statement = mySQLConnection.createStatement();
-
-            statement.executeQuery("USE GroceryStore");
+            statement = mySQLConnection.prepareStatement("USE GroceryStore");
+            statement.executeQuery();
         } catch (Exception e) {
             System.out.println("Unable to connect to Database");
             e.printStackTrace();
@@ -62,7 +58,7 @@ public class MySQLConnector {
     }
 
 
-    private void closeConnection() {
+    public void closeConnection() {
         try {
             mySQLConnection.close();
         } catch (Exception e) {
