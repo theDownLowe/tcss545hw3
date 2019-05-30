@@ -2,7 +2,7 @@ package edu.tcss545.group10.store.dbmodels;
 
 import java.util.Date;
 
-public class Employee {
+public class Employee implements Comparable<Employee> {
 
     private int employeeId;
     private String name;
@@ -107,5 +107,9 @@ public class Employee {
 
     public void setActiveEmployee(boolean activeEmployee) {
         isActiveEmployee = activeEmployee;
+    }
+
+    public int compareTo(Employee other) {
+        return this.employeeId > other.employeeId ? 1 : -1;
     }
 }

@@ -1,6 +1,6 @@
 # Grocery Store Project for the Database and Design Course TCSS 545
 
-TODO:
+TO DO:
 - [ ] A .pdf file with the following
     - [ ] Application Proposal containing the following
         - [ ] Description of the db application
@@ -12,8 +12,18 @@ TODO:
 - [ ] A .sql file with the following
     - [ ] The script that implements the normalized DB schema (declares tables, establishes keys, RI/other constraints)
         - [ ] Add stored procedures and functions
+            - [ ] Function to count # of employees
+            - [ ] Function to count # of customers
+            - [ ] Funciton to count # of distributors
+            - [ ] Function to count # of distinct inventory items
+            - [ ] Function to count # of total inventory items
+            - [ ] Function to count # of goods sold
+            - [ ] Function to count sum of cost of goods bought
         - [ ] Add necessary CHECKS
+            - [ ] Check Inventory.InventoryCount >= 0
+            - [ ] Check Inventory.CurrentPrice > 0
         - [ ] Add FK On Update/Delete
+            - [ ] No Action for both update and delete on all tables
     - [X] A script entering 10 records into each table (initial data set)
 - [ ] Well documented source code
 - [ ] Well written readme on how to run/install the application (this file)

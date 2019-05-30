@@ -1,6 +1,6 @@
 package edu.tcss545.group10.store.dbmodels;
 
-public class Purchase {
+public class Purchase implements Comparable<Purchase>{
 
     private int purchaseId;
     private int employeeId;
@@ -14,8 +14,8 @@ public class Purchase {
                     double costPerUnit, int quantity, double totalCost) {
         this.purchaseId = purchaseId;
         this.employeeId = employeeId;
-        customerId = customerId;
-        itemId = itemId;
+        this.customerId = customerId;
+        this.itemId = itemId;
         this.costPerUnit = costPerUnit;
         this.quantity = quantity;
         this.totalCost = totalCost;
@@ -75,5 +75,9 @@ public class Purchase {
 
     public void setTotalCost(double totalCost) {
         this.totalCost = totalCost;
+    }
+
+    public int compareTo(Purchase other) {
+        return this.purchaseId > other.purchaseId ? 1 : -1;
     }
 }

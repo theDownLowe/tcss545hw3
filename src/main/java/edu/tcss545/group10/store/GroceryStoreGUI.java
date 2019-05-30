@@ -1,16 +1,30 @@
 package edu.tcss545.group10.store;
 
-import edu.tcss545.group10.store.dbmodels.Customer;
-import edu.tcss545.group10.store.dbmodels.Department;
-import edu.tcss545.group10.store.dbmodels.Distributor;
+import edu.tcss545.group10.store.dbmodels.*;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Set;
 
 public class GroceryStoreGUI {
 
     private static JFrame frame;
+
+    private static Object[][] customerData = {};
+    private static Object[][] distributorData = {};
+    private static Object[][] employeeData = {};
+    private static Object[][] inventoryData = {};
+    private static Object[][] purchaseData = {};
+    private static Object[][] departmentData = {};
+
+    private static JTable customerTable;
+    private static JTable distributorTable;
+    private static JTable employeeTable;
+    private static JTable inventoryTable;
+    private static JTable purchaseTable;
+    private static JTable departmentTable;
 
     public static void generateGUI() {
         // Initialize JFrame
@@ -19,6 +33,7 @@ public class GroceryStoreGUI {
         frame.setSize(700, 800);
         frame.setLocationRelativeTo(null);
 
+        refreshData();
         addTabs();
 
         frame.setVisible(true);
@@ -47,12 +62,23 @@ public class GroceryStoreGUI {
         JComponent customerPanel = new JPanel();
 
         String[] columnNames = {"CustomerId", "Name", "Phone", "Address", "DoB", "Customer Since", "Rewards Points"};
-        Object[][] rowData = getCustomers();
+        Object[][] rowData = customerData;
 
-        JTable table = new JTable(rowData, columnNames);
-        JScrollPane scrollPane = new JScrollPane(table);
+        customerTable = new JTable(rowData, columnNames);
+        JScrollPane scrollPane = new JScrollPane(customerTable);
         scrollPane.setPreferredSize(new Dimension(650, 500));
         customerPanel.add(scrollPane);
+
+        JButton refreshButton = new JButton("Refresh");
+        refreshButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                refreshTables();
+            }
+        });
+        customerPanel.add(refreshButton);
+
+        // TODO - Add new customer forms
+        // TODO - Update customer forms
 
         tabbedPane.add("Customers", customerPanel);
     }
@@ -61,12 +87,23 @@ public class GroceryStoreGUI {
         JComponent distributorPanel = new JPanel();
 
         String[] columnNames = {"DistributorId", "Name", "Phone", "Address", "Primary Contact Name"};
-        Object[][] rowData = getDistributors();
+        Object[][] rowData = distributorData;
 
-        JTable table = new JTable(rowData, columnNames);
-        JScrollPane scrollPane = new JScrollPane(table);
+        distributorTable = new JTable(rowData, columnNames);
+        JScrollPane scrollPane = new JScrollPane(distributorTable);
         scrollPane.setPreferredSize(new Dimension(650, 500));
         distributorPanel.add(scrollPane);
+
+        JButton refreshButton = new JButton("Refresh");
+        refreshButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                refreshTables();
+            }
+        });
+        distributorPanel.add(refreshButton);
+
+        // TODO - Add distributor forms
+        // TODO - Update distributor forms
 
         tabbedPane.add("Distributors", distributorPanel);
     }
@@ -76,12 +113,23 @@ public class GroceryStoreGUI {
 
         String[] columnNames = {"EmployeeId", "Name", "Phone", "Address", "DoB", "Hire Date", "Position",
                 "DepartmentId", "Salary", "IsActive"};
-        Object[][] rowData = getEmployees();
+        Object[][] rowData = employeeData;
 
-        JTable table = new JTable(rowData, columnNames);
-        JScrollPane scrollPane = new JScrollPane(table);
+        employeeTable = new JTable(rowData, columnNames);
+        JScrollPane scrollPane = new JScrollPane(employeeTable);
         scrollPane.setPreferredSize(new Dimension(650, 500));
         employeePanel.add(scrollPane);
+
+        JButton refreshButton = new JButton("Refresh");
+        refreshButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                refreshTables();
+            }
+        });
+        employeePanel.add(refreshButton);
+
+        // TODO - Add employee forms
+        // TODO - Update employee forms
 
         tabbedPane.add("Employees", employeePanel);
     }
@@ -91,12 +139,23 @@ public class GroceryStoreGUI {
 
         String[] columnNames = {"ItemId", "Name", "Description", "DepartmentId", "DistributorId",
                 "Current Price", "Inventory Count"};
-        Object[][] rowData = getInventory();
+        Object[][] rowData = inventoryData;
 
-        JTable table = new JTable(rowData, columnNames);
-        JScrollPane scrollPane = new JScrollPane(table);
+        inventoryTable = new JTable(rowData, columnNames);
+        JScrollPane scrollPane = new JScrollPane(inventoryTable);
         scrollPane.setPreferredSize(new Dimension(650, 500));
         inventoryPanel.add(scrollPane);
+
+        JButton refreshButton = new JButton("Refresh");
+        refreshButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                refreshTables();
+            }
+        });
+        inventoryPanel.add(refreshButton);
+
+        // TODO - Add inventory forms
+        // TODO - Update inventory forms
 
         tabbedPane.add("Inventory Items", inventoryPanel);
     }
@@ -105,12 +164,22 @@ public class GroceryStoreGUI {
         JComponent purchasePanel = new JPanel();
 
         String[] columnNames = {"PurchaseId", "EmployeeId", "CustomerId", "ItemId", "Cost Per Unit", "Quantity", "Total Cost"};
-        Object[][] rowData = getPurchases();
+        Object[][] rowData = purchaseData;
 
-        JTable table = new JTable(rowData, columnNames);
-        JScrollPane scrollPane = new JScrollPane(table);
+        purchaseTable = new JTable(rowData, columnNames);
+        JScrollPane scrollPane = new JScrollPane(purchaseTable);
         scrollPane.setPreferredSize(new Dimension(650, 500));
         purchasePanel.add(scrollPane);
+
+        JButton refreshButton = new JButton("Refresh");
+        refreshButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                refreshTables();
+            }
+        });
+        purchasePanel.add(refreshButton);
+
+        // TODO - Add purchase form
 
         tabbedPane.add("Purchases", purchasePanel);
     }
@@ -119,91 +188,40 @@ public class GroceryStoreGUI {
         JComponent departmentPanel = new JPanel();
 
         String[] columnNames = {"DepartmentId", "Name"};
-        Object[][] rowData = getDepartments();
+        Object[][] rowData = departmentData;
 
-        JTable table = new JTable(rowData, columnNames);
-        JScrollPane scrollPane = new JScrollPane(table);
+        departmentTable = new JTable(rowData, columnNames);
+        JScrollPane scrollPane = new JScrollPane(departmentTable);
         scrollPane.setPreferredSize(new Dimension(650, 500));
         departmentPanel.add(scrollPane);
+
+        JButton refreshButton = new JButton("Refresh");
+        refreshButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                refreshTables();
+            }
+        });
+        departmentPanel.add(refreshButton);
 
         tabbedPane.add("Departments", departmentPanel);
     }
 
-    private static Object[][] getCustomers() {
-        Set<Customer> customers = GroceryStoreAPI.getCustomers();
-        if (customers == null) {
-            return null;
-        }
-
-        Object[][] custs = new Object[customers.size()][7];
-        int i = 0;
-        for (Customer c : customers) {
-            custs[i][0] = c.getCustomerId();
-            custs[i][1] = c.getName();
-            custs[i][2] = c.getPhone();
-            custs[i][3] = c.getAddress();
-            custs[i][4] = c.getDob();
-            custs[i][5] = c.getCustomerSince();
-            custs[i][6] = c.getRewardsPoints();
-            i++;
-        }
-
-        return custs;
+    private static void refreshData() {
+        customerData = GroceryStoreUtil.getCustomers(GroceryStoreAPI.getCustomers());
+        distributorData = GroceryStoreUtil.getDistributors(GroceryStoreAPI.getDistributors());
+        employeeData = GroceryStoreUtil.getEmployees(GroceryStoreAPI.getEmployees());
+        inventoryData = GroceryStoreUtil.getInventoryItems(GroceryStoreAPI.getInventoryItems());
+        purchaseData = GroceryStoreUtil.getPurchases(GroceryStoreAPI.getPurchases());
+        departmentData = GroceryStoreUtil.getDepartments(GroceryStoreAPI.getDepartments());
     }
 
-    private static Object[][] getDistributors() {
-        Set<Distributor> distributors = GroceryStoreAPI.getDistributors();
-        if (distributors == null) {
-            return null;
-        }
-
-        Object[][] dists = new Object[distributors.size()][5];
-        int i = 0;
-        for (Distributor d : distributors) {
-            dists[i][0] = d.getDistributorId();
-            dists[i][1] = d.getName();
-            dists[i][2] = d.getPhone();
-            dists[i][3] = d.getAddress();
-            dists[i][4] = d.getPrimaryContactName();
-            i++;
-        }
-
-        return dists;
-    }
-
-    private static Object[][] getEmployees() {
-        // TODO
-        Object[][] obj = {};
-        return obj;
-    }
-
-    private static Object[][] getInventory() {
-        // TODO
-
-        Object[][] obj = {};
-        return obj;
-    }
-
-    private static Object[][] getPurchases() {
-        // TODO
-
-        Object[][] obj = {};
-        return obj;
-    }
-
-    private static Object[][] getDepartments() {
-        Set<Department> departments = GroceryStoreAPI.getDepartments();
-        if (departments == null) {
-            return null;
-        }
-        Object[][] depts = new Object[departments.size()][2];
-        int i = 0;
-        for (Department d : departments) {
-            depts[i][0] = d.getDepartmentId();
-            depts[i][1] = d.getName();
-            i++;
-        }
-
-        return depts;
+    private static void refreshTables() {
+        refreshData();
+        customerTable.validate();
+        distributorTable.validate();
+        employeeTable.validate();
+        inventoryTable.validate();
+        purchaseTable.validate();
+        departmentTable.validate();
     }
 }

@@ -1,6 +1,6 @@
 package edu.tcss545.group10.store.dbmodels;
 
-public class Inventory {
+public class Inventory implements Comparable<Inventory> {
 
     private int itemId;
     private String name;
@@ -76,4 +76,9 @@ public class Inventory {
     public void setInventoryCount(int inventoryCount) {
         this.inventoryCount = inventoryCount;
     }
+
+    public int compareTo(Inventory other) {
+        return this.itemId > other.itemId ? 1 : -1;
+    }
+
 }
