@@ -1,6 +1,6 @@
 package edu.tcss545.group10.store.dbmodels;
 
-public class Distributor {
+public class Distributor implements Comparable<Distributor> {
 
     private int distributorId;
     private String name;
@@ -54,5 +54,9 @@ public class Distributor {
 
     public void setPrimaryContactName(String primaryContactName) {
         this.primaryContactName = primaryContactName;
+    }
+
+    public int compareTo(Distributor other) {
+        return this.distributorId > other.distributorId ? 1 : -1;
     }
 }

@@ -2,7 +2,7 @@ package edu.tcss545.group10.store.dbmodels;
 
 import java.sql.Date;
 
-public class Customer {
+public class Customer implements Comparable<Customer> {
 
     private int customerId;
     private String name;
@@ -76,6 +76,10 @@ public class Customer {
 
     public void setRewardsPoints(int rewardsPoints) {
         this.rewardsPoints = rewardsPoints;
+    }
+
+    public int compareTo(Customer other) {
+        return this.customerId > other.customerId ? 1 : -1;
     }
 
     @Override
