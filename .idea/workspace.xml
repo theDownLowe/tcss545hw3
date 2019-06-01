@@ -2,26 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a3cb822-b499-4748-a6de-d6103b6c0c0b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SQLScripts/GroceryStore.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SQLScripts/GroceryStore.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SQLScripts/sp_resetGroceryStoreDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SQLScripts/sp_resetGroceryStoreDB.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/GroceryStoreAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/GroceryStoreAPI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/GroceryStoreGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/GroceryStoreGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/GroceryStoreMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/GroceryStoreMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/GroceryStoreUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/GroceryStoreUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/MySQLConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/MySQLConnector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbmodels/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbmodels/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbmodels/Distributor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbmodels/Distributor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbmodels/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbmodels/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbmodels/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbmodels/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/edu/tcss545/group10/store/GroceryStoreAPITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/edu/tcss545/group10/store/GroceryStoreAPITest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/tcss545/group10/store/GroceryStoreMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/tcss545/group10/store/GroceryStoreMain.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/tcss545/group10/store/MySQLConnector.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/tcss545/group10/store/MySQLConnector.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/tcss545/group10/store/dbmodels/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/tcss545/group10/store/dbmodels/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/tcss545/group10/store/dbmodels/Department.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/tcss545/group10/store/dbmodels/Department.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/tcss545/group10/store/dbmodels/Distributor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/tcss545/group10/store/dbmodels/Distributor.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/tcss545/group10/store/dbmodels/Employee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/tcss545/group10/store/dbmodels/Employee.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/tcss545/group10/store/dbmodels/Inventory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/tcss545/group10/store/dbmodels/Inventory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/tcss545/group10/store/dbmodels/Purchase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/tcss545/group10/store/dbmodels/Purchase.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -35,129 +26,128 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/GroceryStoreMain.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-              <folding>
-                <element signature="e#194#195#0" expanded="true" />
-                <element signature="e#239#240#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/GroceryStoreGUI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="656">
-              <caret line="1056" column="35" lean-forward="true" selection-start-line="1056" selection-start-column="35" selection-end-line="1056" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2660#2796#0" expanded="true" />
-                <element signature="e#2795#2796#0" expanded="true" />
-                <element signature="e#5070#5212#0" expanded="true" />
-                <element signature="e#5211#5212#0" expanded="true" />
-                <element signature="e#5414#5559#0" expanded="true" />
-                <element signature="e#5558#5559#0" expanded="true" />
-                <element signature="e#6454#6599#0" expanded="true" />
-                <element signature="e#6598#6599#0" expanded="true" />
-                <element signature="e#6819#6967#0" expanded="true" />
-                <element signature="e#6966#6967#0" expanded="true" />
-                <element signature="e#7835#7977#0" expanded="true" />
-                <element signature="e#7976#7977#0" expanded="true" />
-                <element signature="e#8179#8324#0" expanded="true" />
-                <element signature="e#8323#8324#0" expanded="true" />
-                <element signature="e#9193#9336#0" expanded="true" />
-                <element signature="e#9335#9336#0" expanded="true" />
-                <element signature="e#9544#9690#0" expanded="true" />
-                <element signature="e#9689#9690#0" expanded="true" />
-                <element signature="e#10538#10680#0" expanded="true" />
-                <element signature="e#10679#10680#0" expanded="true" />
-                <element signature="e#13382#14326#0" expanded="true" />
-                <element signature="e#14325#14326#0" expanded="true" />
-                <element signature="e#16103#16552#0" expanded="true" />
-                <element signature="e#16551#16552#0" expanded="true" />
-                <element signature="e#18681#19171#0" expanded="true" />
-                <element signature="e#19170#19171#0" expanded="true" />
-                <element signature="e#21307#21815#0" expanded="true" />
-                <element signature="e#21814#21815#0" expanded="true" />
-                <element signature="e#25192#26269#0" expanded="true" />
-                <element signature="e#26268#26269#0" expanded="true" />
-                <element signature="e#29248#29913#0" expanded="true" />
-                <element signature="e#29912#29913#0" expanded="true" />
-                <element signature="e#32518#33147#0" expanded="true" />
-                <element signature="e#33146#33147#0" expanded="true" />
-                <element signature="e#34895#35415#0" expanded="true" />
-                <element signature="e#35414#35415#0" expanded="true" />
-                <element signature="e#38006#38778#0" expanded="true" />
-                <element signature="e#38777#38778#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SQLScripts/sp_resetGroceryStoreDB.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="184" column="3" selection-start-line="184" selection-start-column="3" selection-end-line="184" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SQLScripts/GroceryStore.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/GroceryStoreUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="582">
-              <caret line="144" column="20" lean-forward="true" selection-start-line="144" selection-start-column="20" selection-end-line="144" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/GroceryStoreAPI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="300" lean-forward="true" selection-start-line="300" selection-end-line="300" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/MySQLConnector.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
-              <folding>
-                <element signature="e#624#625#0" expanded="true" />
-                <element signature="e#662#663#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5954323">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/GroceryStoreMain.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="255">
+                  <caret line="17" selection-start-line="17" selection-end-line="17" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/GroceryStoreGUI.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="17476">
+                  <caret line="1056" column="35" selection-start-line="1056" selection-start-column="35" selection-end-line="1056" selection-end-column="35" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/SQLScripts/sp_resetGroceryStoreDB.sql">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="3128">
+                  <caret line="184" column="3" selection-start-line="184" selection-start-column="3" selection-end-line="184" selection-end-column="3" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/SQLScripts/GroceryStore.sql">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="272">
+                  <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/GroceryStoreAPI.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="215">
+                  <caret line="268" column="7" selection-start-line="268" selection-start-column="7" selection-end-line="268" selection-end-column="7" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/java/edu/tcss545/group10/store/GroceryStoreAPITest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="476">
+                  <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#402#403#0" expanded="true" />
+                    <element signature="e#449#450#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/pom.xml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="221">
+                  <caret line="23" column="31" lean-forward="true" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbmodels/Purchase.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="680">
+                  <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+                  <folding>
+                    <element signature="e#744#745#0" expanded="true" />
+                    <element signature="e#777#778#0" expanded="true" />
+                    <element signature="e#826#827#0" expanded="true" />
+                    <element signature="e#870#871#0" expanded="true" />
+                    <element signature="e#904#905#0" expanded="true" />
+                    <element signature="e#937#938#0" expanded="true" />
+                    <element signature="e#986#987#0" expanded="true" />
+                    <element signature="e#1030#1031#0" expanded="true" />
+                    <element signature="e#1064#1065#0" expanded="true" />
+                    <element signature="e#1097#1098#0" expanded="true" />
+                    <element signature="e#1146#1147#0" expanded="true" />
+                    <element signature="e#1185#1186#0" expanded="true" />
+                    <element signature="e#1215#1216#0" expanded="true" />
+                    <element signature="e#1244#1245#0" expanded="true" />
+                    <element signature="e#1285#1286#0" expanded="true" />
+                    <element signature="e#1316#1317#0" expanded="true" />
+                    <element signature="e#1354#1355#0" expanded="true" />
+                    <element signature="e#1388#1389#0" expanded="true" />
+                    <element signature="e#1442#1443#0" expanded="true" />
+                    <element signature="e#1488#1489#0" expanded="true" />
+                    <element signature="e#1520#1521#0" expanded="true" />
+                    <element signature="e#1551#1552#0" expanded="true" />
+                    <element signature="e#1596#1597#0" expanded="true" />
+                    <element signature="e#1636#1637#0" expanded="true" />
+                    <element signature="e#1672#1673#0" expanded="true" />
+                    <element signature="e#1704#1705#0" expanded="true" />
+                    <element signature="e#1754#1755#0" expanded="true" />
+                    <element signature="e#1796#1797#0" expanded="true" />
+                    <element signature="e#1840#1841#0" expanded="true" />
+                    <element signature="e#1906#1907#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -190,8 +180,26 @@
         <option value="$PROJECT_DIR$/SQLScripts/sp_resetGroceryStoreDB.sql" />
         <option value="$PROJECT_DIR$/SQLScripts/GroceryStore.sql" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/test/java/edu/tcss545/group10/store/GroceryStoreAPITest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="GroceryStore" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="GroceryStore" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
@@ -203,7 +211,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -240,17 +247,27 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="store" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GroceryStore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tcss545hw3" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -264,9 +281,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="GroceryStoreMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="edu.tcss545.group10.store.GroceryStoreMain" />
+  <component name="RunManager" selected="JUnit.GroceryStoreAPITest">
+    <configuration name="GroceryStoreAPITest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="GroceryStore" />
       <extension name="coverage">
         <pattern>
@@ -274,13 +290,84 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="edu.tcss545.group10.store" />
+      <option name="MAIN_CLASS_NAME" value="edu.tcss545.group10.store.GroceryStoreAPITest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GroceryStoreAPITest.testAddEmployee" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GroceryStore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.tcss545.group10.store.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.tcss545.group10.store" />
+      <option name="MAIN_CLASS_NAME" value="edu.tcss545.group10.store.GroceryStoreAPITest" />
+      <option name="METHOD_NAME" value="testAddEmployee" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GroceryStoreAPITest.testAddPurchase" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GroceryStore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.tcss545.group10.store.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.tcss545.group10.store" />
+      <option name="MAIN_CLASS_NAME" value="edu.tcss545.group10.store.GroceryStoreAPITest" />
+      <option name="METHOD_NAME" value="testAddPurchase" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GroceryStoreAPITest.testUpdateEmployee" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GroceryStore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.tcss545.group10.store.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.tcss545.group10.store" />
+      <option name="MAIN_CLASS_NAME" value="edu.tcss545.group10.store.GroceryStoreAPITest" />
+      <option name="METHOD_NAME" value="testUpdateEmployee" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GroceryStoreAPITest.testUpdateInventoryItem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="GroceryStore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.tcss545.group10.store.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.tcss545.group10.store" />
+      <option name="MAIN_CLASS_NAME" value="edu.tcss545.group10.store.GroceryStoreAPITest" />
+      <option name="METHOD_NAME" value="testUpdateInventoryItem" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GroceryStoreMain" />
+        <item itemvalue="JUnit.GroceryStoreAPITest" />
+        <item itemvalue="JUnit.GroceryStoreAPITest.testAddPurchase" />
+        <item itemvalue="JUnit.GroceryStoreAPITest.testUpdateEmployee" />
+        <item itemvalue="JUnit.GroceryStoreAPITest.testAddEmployee" />
+        <item itemvalue="JUnit.GroceryStoreAPITest.testUpdateInventoryItem" />
       </list>
     </recent_temporary>
   </component>
@@ -297,6 +384,38 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="GroceryStoreAPITest_testAddDistributor - 2019.06.01 at 11h 38m 14s.xml">
+      <configuration name="GroceryStoreAPITest.testAddDistributor" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GroceryStoreAPITest_testUpdateDistributor - 2019.06.01 at 11h 40m 53s.xml">
+      <configuration name="GroceryStoreAPITest.testUpdateDistributor" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GroceryStoreAPITest_testAddInventoryItem - 2019.06.01 at 11h 45m 16s.xml">
+      <configuration name="GroceryStoreAPITest.testAddInventoryItem" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GroceryStoreAPITest_testUpdateInventoryItem - 2019.06.01 at 11h 47m 52s.xml">
+      <configuration name="GroceryStoreAPITest.testUpdateInventoryItem" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GroceryStoreAPITest_testAddEmployee - 2019.06.01 at 11h 56m 11s.xml">
+      <configuration name="GroceryStoreAPITest.testAddEmployee" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GroceryStoreAPITest_testUpdateEmployee - 2019.06.01 at 11h 59m 07s.xml">
+      <configuration name="GroceryStoreAPITest.testUpdateEmployee" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GroceryStoreAPITest_testUpdateEmployee - 2019.06.01 at 11h 59m 35s.xml">
+      <configuration name="GroceryStoreAPITest.testUpdateEmployee" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GroceryStoreAPITest_testUpdateEmployee - 2019.06.01 at 12h 00m 08s.xml">
+      <configuration name="GroceryStoreAPITest.testUpdateEmployee" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GroceryStoreAPITest_testAddPurchase - 2019.06.01 at 12h 03m 09s.xml">
+      <configuration name="GroceryStoreAPITest.testAddPurchase" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="GroceryStoreAPITest - 2019.06.01 at 12h 03m 34s.xml">
+      <configuration name="GroceryStoreAPITest" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -308,9 +427,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1294" height="1407" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1815235" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.37277147" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -319,7 +437,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3320251" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33359498" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -327,22 +445,82 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32574567" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32501948" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven" order="4" />
+      <window_info anchor="right" id="Maven" order="4" visible="true" weight="0.5121556" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/SQLScripts/function_getNumberOfCustomers.sql" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/GroceryStoreMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/GroceryStoreGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17476">
+          <caret line="1056" column="35" selection-start-line="1056" selection-start-column="35" selection-end-line="1056" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLScripts/sp_resetGroceryStoreDB.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3128">
+          <caret line="184" column="3" selection-start-line="184" selection-start-column="3" selection-end-line="184" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/MySQLConnector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbmodels/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="130">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/GroceryStoreAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="268" column="7" selection-start-line="268" selection-start-column="7" selection-end-line="268" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/GroceryStoreUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="144" column="20" selection-start-line="144" selection-start-column="20" selection-end-line="144" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SQLScripts/GroceryStore.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -353,6 +531,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbmodels/Inventory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbmodels/Employee.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
@@ -360,155 +545,138 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbmodels/Inventory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="30" column="16" lean-forward="true" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/dbmodels/Purchase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="40" column="26" lean-forward="true" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+        <state relative-caret-position="680">
+          <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
           <folding>
+            <element signature="e#744#745#0" expanded="true" />
             <element signature="e#777#778#0" expanded="true" />
+            <element signature="e#826#827#0" expanded="true" />
             <element signature="e#870#871#0" expanded="true" />
+            <element signature="e#904#905#0" expanded="true" />
             <element signature="e#937#938#0" expanded="true" />
+            <element signature="e#986#987#0" expanded="true" />
             <element signature="e#1030#1031#0" expanded="true" />
+            <element signature="e#1064#1065#0" expanded="true" />
             <element signature="e#1097#1098#0" expanded="true" />
+            <element signature="e#1146#1147#0" expanded="true" />
             <element signature="e#1185#1186#0" expanded="true" />
+            <element signature="e#1215#1216#0" expanded="true" />
             <element signature="e#1244#1245#0" expanded="true" />
+            <element signature="e#1285#1286#0" expanded="true" />
             <element signature="e#1316#1317#0" expanded="true" />
+            <element signature="e#1354#1355#0" expanded="true" />
             <element signature="e#1388#1389#0" expanded="true" />
+            <element signature="e#1442#1443#0" expanded="true" />
             <element signature="e#1488#1489#0" expanded="true" />
+            <element signature="e#1520#1521#0" expanded="true" />
             <element signature="e#1551#1552#0" expanded="true" />
+            <element signature="e#1596#1597#0" expanded="true" />
             <element signature="e#1636#1637#0" expanded="true" />
+            <element signature="e#1672#1673#0" expanded="true" />
             <element signature="e#1704#1705#0" expanded="true" />
+            <element signature="e#1754#1755#0" expanded="true" />
             <element signature="e#1796#1797#0" expanded="true" />
+            <element signature="e#1840#1841#0" expanded="true" />
             <element signature="e#1906#1907#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SQLScripts/function_getNumberOfCustomers.sql">
+    <entry file="file://$PROJECT_DIR$/src/test/java/edu/tcss545/group10/store/GroceryStoreAPITest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/MySQLConnector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="48" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
-          <folding>
-            <element signature="e#624#625#0" expanded="true" />
-            <element signature="e#662#663#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/GroceryStoreAPI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="300" lean-forward="true" selection-start-line="300" selection-end-line="300" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/GroceryStoreMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#194#195#0" expanded="true" />
-            <element signature="e#239#240#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/GroceryStoreUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="144" column="20" lean-forward="true" selection-start-line="144" selection-start-column="20" selection-end-line="144" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/edu/tcss545/group10/store/GroceryStoreGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="1056" column="35" lean-forward="true" selection-start-line="1056" selection-start-column="35" selection-end-line="1056" selection-end-column="35" />
+        <state relative-caret-position="476">
+          <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2660#2796#0" expanded="true" />
-            <element signature="e#2795#2796#0" expanded="true" />
-            <element signature="e#5070#5212#0" expanded="true" />
-            <element signature="e#5211#5212#0" expanded="true" />
-            <element signature="e#5414#5559#0" expanded="true" />
-            <element signature="e#5558#5559#0" expanded="true" />
-            <element signature="e#6454#6599#0" expanded="true" />
-            <element signature="e#6598#6599#0" expanded="true" />
-            <element signature="e#6819#6967#0" expanded="true" />
-            <element signature="e#6966#6967#0" expanded="true" />
-            <element signature="e#7835#7977#0" expanded="true" />
-            <element signature="e#7976#7977#0" expanded="true" />
-            <element signature="e#8179#8324#0" expanded="true" />
-            <element signature="e#8323#8324#0" expanded="true" />
-            <element signature="e#9193#9336#0" expanded="true" />
-            <element signature="e#9335#9336#0" expanded="true" />
-            <element signature="e#9544#9690#0" expanded="true" />
-            <element signature="e#9689#9690#0" expanded="true" />
-            <element signature="e#10538#10680#0" expanded="true" />
-            <element signature="e#10679#10680#0" expanded="true" />
-            <element signature="e#13382#14326#0" expanded="true" />
-            <element signature="e#14325#14326#0" expanded="true" />
-            <element signature="e#16103#16552#0" expanded="true" />
-            <element signature="e#16551#16552#0" expanded="true" />
-            <element signature="e#18681#19171#0" expanded="true" />
-            <element signature="e#19170#19171#0" expanded="true" />
-            <element signature="e#21307#21815#0" expanded="true" />
-            <element signature="e#21814#21815#0" expanded="true" />
-            <element signature="e#25192#26269#0" expanded="true" />
-            <element signature="e#26268#26269#0" expanded="true" />
-            <element signature="e#29248#29913#0" expanded="true" />
-            <element signature="e#29912#29913#0" expanded="true" />
-            <element signature="e#32518#33147#0" expanded="true" />
-            <element signature="e#33146#33147#0" expanded="true" />
-            <element signature="e#34895#35415#0" expanded="true" />
-            <element signature="e#35414#35415#0" expanded="true" />
-            <element signature="e#38006#38778#0" expanded="true" />
-            <element signature="e#38777#38778#0" expanded="true" />
+            <element signature="e#402#403#0" expanded="true" />
+            <element signature="e#449#450#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SQLScripts/sp_resetGroceryStoreDB.sql">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="184" column="3" selection-start-line="184" selection-start-column="3" selection-end-line="184" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SQLScripts/GroceryStore.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+        <state relative-caret-position="221">
+          <caret line="23" column="31" lean-forward="true" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>GroceryStore:jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>12</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
           <splitter-proportions>
             <option name="proportions">
               <list>
