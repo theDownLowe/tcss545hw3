@@ -29,8 +29,8 @@
 # How to Install/Run the Application
 * Download and extract the project onto your machine
 * Ensure you have the latest java version installed on your machine
-* Go into the project folder, then the target folder
-* Right click on the GroceryStore-1.0-SNAPSHOT-jar-with-dependencies.jar file
+* Go into the project folder, then the Executable folder
+* Right click on the GroceryStore.jar file
 * Select Open With...
 * Then click Java
 
