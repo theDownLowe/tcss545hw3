@@ -16,8 +16,8 @@
         - [X] Add FK On Update/Delete
     - [X] A script entering 10 records into each table (initial data set)
 - [X] Well documented source code
-- [ ] Well written readme on how to run/install the application (this file)
-- [ ] Test Cases
+- [X] Well written readme on how to run/install the application (this file)
+- [X] Test Cases
 - [ ] A powerpoint with the following:
     - [ ] Application Description (1-2 slides)
     - [ ] Raw Data and back end design (2-3 slides)
@@ -25,6 +25,14 @@
     - [ ] Demonstration of at least 3 functionalities during demo
     - [ ] Conclusion (1 slide)
     - [ ] References (1 slide)
+
+# How to Install/Run the Application
+* Download and extract the project onto your machine
+* Ensure you have the latest java version installed on your machine
+* Go into the project folder, then the target folder
+* Right click on the GroceryStore-1.0-SNAPSHOT-jar-with-dependencies.jar file
+* Select Open With...
+* Then click Java
 
 # Capabilities
 * Ability to Add new Customers into the database
@@ -40,7 +48,4 @@
 * Ability to Add a new Employee into the database
 * Ability to Add a new Purchase record into the database 
     
-# How to Install and Run
-## Installation
 
-## Running
