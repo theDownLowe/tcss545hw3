@@ -16,6 +16,13 @@ public class Distributor implements Comparable<Distributor> {
         this.primaryContactName = primaryContactName;
     }
 
+    public Distributor(int distributorId, String phone, String address, String primaryContactName) {
+        this.distributorId = distributorId;
+        this.phone = phone;
+        this.address = address;
+        this.primaryContactName = primaryContactName;
+    }
+
     public int getDistributorId() {
         return distributorId;
     }

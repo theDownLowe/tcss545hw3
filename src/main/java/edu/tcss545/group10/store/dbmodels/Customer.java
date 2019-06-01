@@ -22,6 +22,12 @@ public class Customer implements Comparable<Customer> {
         this.rewardsPoints = rewardsPoints;
     }
 
+    public Customer(int customerId, String phone, String address) {
+        this.customerId = customerId;
+        this.phone = phone;
+        this.address = address;
+    }
+
     public int getCustomerId() {
         return customerId;
     }

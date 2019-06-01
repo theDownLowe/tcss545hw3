@@ -2,22 +2,33 @@ package edu.tcss545.group10.store;
 
 import java.sql.*;
 
+/**
+ * Establishes and maintains connections to a MySQL database.
+ * Passes queries to the database and retrieves the results.
+ * Passes update SQL statements to the database.
+ */
 public class MySQLConnector {
 
     private static final String SQL_DRIVER_NAME = "com.mysql.cj.jdbc.Driver";
-    private static final String MYSQL_DB_NAME ="jdbc:mysql://mydbinstance.c7wiwrmvv2sb.us-west-2.rds.amazonaws.com";
+    private static final String MYSQL_DB_NAME ="jdbc:mysql://grocerystore.c7wiwrmvv2sb.us-west-2.rds.amazonaws.com";
     private static final String MYSQL_DB_USERNAME = "group10";
     private static final String MYSQL_DB_PASSWORD = "tcss545a";
 
     private Connection mySQLConnection;
     private PreparedStatement statement;
 
-
+    /**
+     * Constructor for Connector, initializes the MYSQL Connection
+     */
     public MySQLConnector () {
         initializeConnection();
     }
 
-
+    /**
+     * Makes a call to update the MySQL database using the given SQL Statement.
+     *
+     * @param updateStatement - Statement to be sent to the MySQL Database
+     */
     public void makeUpdate(String updateStatement) {
         try {
             initializeConnection();
@@ -29,7 +40,12 @@ public class MySQLConnector {
         }
     }
 
-
+    /**
+     * Makes a call to update the MySQL database using the given SQL Statement.
+     *
+     * @param query - - Statement to be sent to the MySQL Database
+     * @return The returned results from the SQL query
+     */
     public ResultSet makeQuery(String query) {
         ResultSet rs = null;
         try {
@@ -44,7 +60,9 @@ public class MySQLConnector {
         return rs;
     }
 
-
+    /**
+     * Initializes the connection to MySQL, declaring the correct Schema to use.
+     */
     private void initializeConnection() {
         try {
             Class.forName(SQL_DRIVER_NAME);
@@ -57,7 +75,9 @@ public class MySQLConnector {
         }
     }
 
-
+    /**
+     * Closes the database connection
+     */
     public void closeConnection() {
         try {
             mySQLConnection.close();

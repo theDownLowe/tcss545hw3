@@ -1,6 +1,6 @@
 # Grocery Store Project for the Database and Design Course TCSS 545
 
-TO DO:
+## TO DO:
 - [ ] A .pdf file with the following
     - [ ] Application Proposal containing the following
         - [ ] Description of the db application
@@ -9,25 +9,15 @@ TO DO:
         - [ ] A note about implementing using AWS cloud
     - [ ] ER Model of the Application
     - [ ] Schema of the database normalized to 4NF. Detailed steps of the normalization
-- [ ] A .sql file with the following
-    - [ ] The script that implements the normalized DB schema (declares tables, establishes keys, RI/other constraints)
-        - [ ] Add stored procedures and functions
-            - [ ] Function to count # of employees
-            - [ ] Function to count # of customers
-            - [ ] Funciton to count # of distributors
-            - [ ] Function to count # of distinct inventory items
-            - [ ] Function to count # of total inventory items
-            - [ ] Function to count # of goods sold
-            - [ ] Function to count sum of cost of goods bought
-        - [ ] Add necessary CHECKS
-            - [ ] Check Inventory.InventoryCount >= 0
-            - [ ] Check Inventory.CurrentPrice > 0
-        - [ ] Add FK On Update/Delete
-            - [ ] No Action for both update and delete on all tables
+- [X] A .sql file with the following
+    - [X] The script that implements the normalized DB schema (declares tables, establishes keys, RI/other constraints)
+        - [X] Add stored procedures and functions
+        - [X] Add necessary CHECKS
+        - [X] Add FK On Update/Delete
     - [X] A script entering 10 records into each table (initial data set)
-- [ ] Well documented source code
+- [X] Well documented source code
 - [ ] Well written readme on how to run/install the application (this file)
-- [ ] Test Cases (A file explaining?)
+- [ ] Test Cases
 - [ ] A powerpoint with the following:
     - [ ] Application Description (1-2 slides)
     - [ ] Raw Data and back end design (2-3 slides)
@@ -35,7 +25,7 @@ TO DO:
     - [ ] Demonstration of at least 3 functionalities during demo
     - [ ] Conclusion (1 slide)
     - [ ] References (1 slide)
-    
+
 # Capabilities
 * Ability to Add new Customers into the database
 * Ability to Update the phone number or address of customers

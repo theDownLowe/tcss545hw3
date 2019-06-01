@@ -5,31 +5,31 @@ SET FOREIGN_KEY_CHECKS = 0;
 
 -- Customer(CustomerId, Name, Phone, Address, DoB, CustomerSince, RewardPoints)
 DROP TABLE IF EXISTS Customer;
-CREATE TABLE Customer( 
-  CustomerId    INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
-  Name          VARCHAR(60) NOT NULL, 
-  Phone         CHAR(10) NOT NULL, 
+CREATE TABLE Customer(
+  CustomerId    INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  Name          VARCHAR(60) NOT NULL,
+  Phone         CHAR(10) NOT NULL,
   Address       VARCHAR(120) NOT NULL ,
   DoB           Date NOT NULL,
-  CustomerSince Date NOT NULL,  
-  RewardPoints  INT DEFAULT 0
+  CustomerSince Date NOT NULL,
+  RewardPoints  INT DEFAULT 0 CHECK(RewardPoints >= 0)
 );
 
 
 -- Department(DepartmentId, Name)
 DROP TABLE IF EXISTS Department;
-CREATE TABLE Department ( 
-  DepartmentId  INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
-  Name          VARCHAR(60) NOT NULL 
+CREATE TABLE Department (
+  DepartmentId  INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  Name          VARCHAR(60) NOT NULL
 );
 
 
 -- Distributor(DistributorId, Name, Phone, Address, PrimaryContactName)
 DROP TABLE IF EXISTS Distributor;
-CREATE TABLE Distributor( 
-  DistributorId       INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
-  Name                VARCHAR (60) NOT NULL, 
-  Phone               CHAR(10) NOT NULL, 
+CREATE TABLE Distributor(
+  DistributorId       INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  Name                VARCHAR (60) NOT NULL,
+  Phone               CHAR(10) NOT NULL,
   Address             VARCHAR(120) NOT NULL,
   PrimaryContactName  VARCHAR(60) NOT NULL
 );
@@ -37,51 +37,62 @@ CREATE TABLE Distributor(
 
 -- Inventory(ItemId, Name, Description, DepartmentId, DistributorId, CurrentPrice, InventoryCount)
 DROP TABLE IF EXISTS Inventory;
-CREATE TABLE Inventory( 
-  ItemId           INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
-  Name             VARCHAR(60) NOT NULL, 
-  Description      VARCHAR(255) NOT NULL, 
+CREATE TABLE Inventory(
+  ItemId           INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  Name             VARCHAR(60) NOT NULL,
+  Description      VARCHAR(255) NOT NULL,
   DepartmentId     INT NOT NULL,
   DistributorId    INT NOT NULL,
-  CurrentPrice     DECIMAL(7,2) DEFAULT 0,
-  InventoryCount   INT UNSIGNED DEFAULT 0,
-  FOREIGN KEY (DepartmentId) REFERENCES Department(DepartmentId),
+  CurrentPrice     DECIMAL(7,2) DEFAULT 0 CHECK(CurrentPrice > 0),
+  InventoryCount   INT UNSIGNED DEFAULT 0 CHECK(InventoryCount >= 0),
+  FOREIGN KEY (DepartmentId) REFERENCES Department(DepartmentId)
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION,
   FOREIGN KEY (DistributorId) REFERENCES Distributor(DistributorId)
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
 );
 
 
 -- Employee(EmployeeId, Name, Phone, Address, DoB, HireDate, Position, DepartmentId, Salary)
 DROP TABLE IF EXISTS Employee;
-CREATE TABLE Employee( 
-  EmployeeId    	INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
-  Name          	VARCHAR(60) NOT NULL, 
-  Phone         	CHAR(10) NOT NULL, 
+CREATE TABLE Employee(
+  EmployeeId    	INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  Name          	VARCHAR(60) NOT NULL,
+  Phone         	CHAR(10) NOT NULL,
   Address       	VARCHAR(120)	NOT NULL ,
-  DoB           	Date NOT NULL, 
+  DoB           	Date NOT NULL,
   HireDate      	Date NOT NULL,
   Position      	VARCHAR(60) NOT NULL,
   DepartmentId  	INT NOT NULL,
-  Salary        	DECIMAL(8,2),
+  Salary        	DECIMAL(8,2) CHECK(Salary > 0),
   IsActiveEmployee  BOOLEAN NOT NULL DEFAULT FALSE,
   FOREIGN KEY (DepartmentId) REFERENCES Department(DepartmentId)
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
 );
 
 
 -- Purchase(PurchaseId, EmployeeId, CustomerId, ItemId, CostPerUnit, Quantity, TotalCost)
 DROP TABLE IF EXISTS Purchase;
-CREATE TABLE Purchase( 
-  PurchaseId    INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
-  EmployeeId    INT NOT NULL, 
-  CustomerId    INT NOT NULL, 
+CREATE TABLE Purchase(
+  PurchaseId    INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  EmployeeId    INT NOT NULL,
+  CustomerId    INT NOT NULL,
   ItemId        INT NOT NULL,
-  CostPerUnit   DECIMAL(7,2) NOT NULL,
-  Quantity      INT NOT NULL, 
-  TotalCost     DECIMAL(8,2) NOT NULL,
-  FOREIGN KEY (EmployeeId) REFERENCES Employee(EmployeeId),
-  FOREIGN KEY (CustomerId) REFERENCES Customer(CustomerId),
+  CostPerUnit   DECIMAL(7,2) NOT NULL CHECK(CostPerUnit > 0),
+  Quantity      INT NOT NULL CHECK(Quantity > 0),
+  TotalCost     DECIMAL(8,2) NOT NULL CHECK(TotalCost > 0),
+  FOREIGN KEY (EmployeeId) REFERENCES Employee(EmployeeId)
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION,
+  FOREIGN KEY (CustomerId) REFERENCES Customer(CustomerId)
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION,
   FOREIGN KEY (ItemId) REFERENCES Inventory(ItemId)
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
 );
-
 
 
 -- Insert statments

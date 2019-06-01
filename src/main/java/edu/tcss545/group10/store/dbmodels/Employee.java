@@ -1,6 +1,6 @@
 package edu.tcss545.group10.store.dbmodels;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Employee implements Comparable<Employee> {
 
@@ -23,6 +23,16 @@ public class Employee implements Comparable<Employee> {
         this.address = address;
         this.dob = dob;
         this.hireDate = hireDate;
+        this.position = position;
+        this.departmentId = departmentId;
+        this.salary = salary;
+        this.isActiveEmployee = isActiveEmployee;
+    }
+
+    public Employee(int employeeId, String phone, String address, String position, int departmentId, double salary, boolean isActiveEmployee) {
+        this.employeeId = employeeId;
+        this.phone = phone;
+        this.address = address;
         this.position = position;
         this.departmentId = departmentId;
         this.salary = salary;

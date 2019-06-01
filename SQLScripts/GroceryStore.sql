@@ -13,7 +13,7 @@ CREATE TABLE Customer(
   Address       VARCHAR(120) NOT NULL ,
   DoB           Date NOT NULL,
   CustomerSince Date NOT NULL,  
-  RewardPoints  INT DEFAULT 0
+  RewardPoints  INT DEFAULT 0 CHECK(RewardPoints >= 0)
 );
 
 
@@ -41,10 +41,14 @@ CREATE TABLE Inventory(
   Description      VARCHAR(255) NOT NULL, 
   DepartmentId     INT NOT NULL,
   DistributorId    INT NOT NULL,
-  CurrentPrice     DECIMAL(7,2) DEFAULT 0,
-  InventoryCount   INT UNSIGNED DEFAULT 0,
-  FOREIGN KEY (DepartmentId) REFERENCES Department(DepartmentId),
+  CurrentPrice     DECIMAL(7,2) DEFAULT 0 CHECK(CurrentPrice > 0),
+  InventoryCount   INT UNSIGNED DEFAULT 0 CHECK(InventoryCount >= 0),
+  FOREIGN KEY (DepartmentId) REFERENCES Department(DepartmentId)
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION,
   FOREIGN KEY (DistributorId) REFERENCES Distributor(DistributorId)
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
 );
 
 
@@ -58,9 +62,11 @@ CREATE TABLE Employee(
   HireDate      	Date NOT NULL,
   Position      	VARCHAR(60) NOT NULL,
   DepartmentId  	INT NOT NULL,
-  Salary        	DECIMAL(8,2),
+  Salary        	DECIMAL(8,2) CHECK(Salary > 0),
   IsActiveEmployee  BOOLEAN NOT NULL DEFAULT FALSE,
   FOREIGN KEY (DepartmentId) REFERENCES Department(DepartmentId)
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
 );
 
 
@@ -70,12 +76,18 @@ CREATE TABLE Purchase(
   EmployeeId    INT NOT NULL, 
   CustomerId    INT NOT NULL, 
   ItemId        INT NOT NULL,
-  CostPerUnit   DECIMAL(7,2) NOT NULL,
-  Quantity      INT NOT NULL, 
-  TotalCost     DECIMAL(8,2) NOT NULL,
-  FOREIGN KEY (EmployeeId) REFERENCES Employee(EmployeeId),
-  FOREIGN KEY (CustomerId) REFERENCES Customer(CustomerId),
+  CostPerUnit   DECIMAL(7,2) NOT NULL CHECK(CostPerUnit > 0),
+  Quantity      INT NOT NULL CHECK(Quantity > 0),
+  TotalCost     DECIMAL(8,2) NOT NULL CHECK(TotalCost > 0),
+  FOREIGN KEY (EmployeeId) REFERENCES Employee(EmployeeId)
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION,
+  FOREIGN KEY (CustomerId) REFERENCES Customer(CustomerId)
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION,
   FOREIGN KEY (ItemId) REFERENCES Inventory(ItemId)
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
 );
 
 

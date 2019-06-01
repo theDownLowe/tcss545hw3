@@ -21,6 +21,12 @@ public class Inventory implements Comparable<Inventory> {
         this.inventoryCount = inventoryCount;
     }
 
+    public Inventory(int itemId, double currentPrice, int inventoryCount) {
+        this.itemId = itemId;
+        this.currentPrice = currentPrice;
+        this.inventoryCount = inventoryCount;
+    }
+
     public int getItemId() {
         return itemId;
     }

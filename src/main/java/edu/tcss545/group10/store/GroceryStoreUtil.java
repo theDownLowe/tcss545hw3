@@ -4,9 +4,18 @@ import edu.tcss545.group10.store.dbmodels.*;
 
 import java.util.Set;
 
-public class GroceryStoreUtil {
+/**
+ * Utility class used primarily for data conversions.
+ */
+class GroceryStoreUtil {
 
-    public static Object[][] getCustomers(Set<Customer> customers) {
+    /**
+     * Transforms a Set of Customers into a 2D Object arr of Customers.
+     *
+     * @param customers - Set to be converted
+     * @return 2D Object arr representation
+     */
+    static Object[][] getCustomers(Set<Customer> customers) {
         if (customers == null) {
             return null;
         }
@@ -27,7 +36,13 @@ public class GroceryStoreUtil {
         return custs;
     }
 
-    public static Object[][] getDistributors(Set<Distributor> distributors) {
+    /**
+     * Transforms a Set of Distributors into a 2D Object arr of Distributors.
+     *
+     * @param distributors - Set to be converted
+     * @return 2D Object arr representation
+     */
+    static Object[][] getDistributors(Set<Distributor> distributors) {
         if (distributors == null) {
             return null;
         }
@@ -46,7 +61,13 @@ public class GroceryStoreUtil {
         return dists;
     }
 
-    public static Object[][] getEmployees(Set<Employee> employees) {
+    /**
+     * Transforms a Set of Employees into a 2D Object arr of Employees.
+     *
+     * @param employees - Set to be converted
+     * @return 2D Object arr representation
+     */
+    static Object[][] getEmployees(Set<Employee> employees) {
         if (employees == null) {
             return null;
         }
@@ -54,7 +75,7 @@ public class GroceryStoreUtil {
         Object[][] empls = new Object[employees.size()][10];
         int i = 0;
         for (Employee e : employees) {
-            empls[i][0] = e.getDepartmentId();
+            empls[i][0] = e.getEmployeeId();
             empls[i][1] = e.getName();
             empls[i][2] = e.getPhone();
             empls[i][3] = e.getAddress();
@@ -70,7 +91,13 @@ public class GroceryStoreUtil {
         return empls;
     }
 
-    public static Object[][] getInventoryItems(Set<Inventory> inventoryItems) {
+    /**
+     * Transforms a Set of Inventory Items into a 2D Object arr of Inventory Items.
+     *
+     * @param inventoryItems - Set to be converted
+     * @return 2D Object arr representation
+     */
+    static Object[][] getInventoryItems(Set<Inventory> inventoryItems) {
         if (inventoryItems == null) {
             return null;
         }
@@ -91,7 +118,13 @@ public class GroceryStoreUtil {
         return invt;
     }
 
-    public static Object[][] getPurchases(Set<Purchase> purchases) {
+    /**
+     * Transforms a Set of Purchases into a 2D Object arr of Purchases.
+     *
+     * @param purchases - Set to be converted
+     * @return 2D Object arr representation
+     */
+    static Object[][] getPurchases(Set<Purchase> purchases) {
         if (purchases == null) {
             return null;
         }
@@ -112,7 +145,13 @@ public class GroceryStoreUtil {
         return purs;
     }
 
-    public static Object[][] getDepartments(Set<Department> departments) {
+    /**
+     * Transforms a Set of Departments into a 2D Object arr of Departments.
+     *
+     * @param departments - Set to be converted
+     * @return 2D Object arr representation
+     */
+    static Object[][] getDepartments(Set<Department> departments) {
         if (departments == null) {
             return null;
         }
