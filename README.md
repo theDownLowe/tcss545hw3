@@ -1,31 +1,5 @@
 # Grocery Store Project for the Database and Design Course TCSS 545
 
-## TO DO:
-- [ ] A .pdf file with the following
-    - [ ] Application Proposal containing the following
-        - [ ] Description of the db application
-        - [ ] Functionalities being implemented (At least 3 different)
-        - [ ] Any Extra functionalities/artifacts
-        - [ ] A note about implementing using AWS cloud
-    - [ ] ER Model of the Application
-    - [ ] Schema of the database normalized to 4NF. Detailed steps of the normalization
-- [X] A .sql file with the following
-    - [X] The script that implements the normalized DB schema (declares tables, establishes keys, RI/other constraints)
-        - [X] Add stored procedures and functions
-        - [X] Add necessary CHECKS
-        - [X] Add FK On Update/Delete
-    - [X] A script entering 10 records into each table (initial data set)
-- [X] Well documented source code
-- [X] Well written readme on how to run/install the application (this file)
-- [X] Test Cases
-- [ ] A powerpoint with the following:
-    - [ ] Application Description (1-2 slides)
-    - [ ] Raw Data and back end design (2-3 slides)
-    - [ ] Implemented Functionalities (1-2 slides)
-    - [ ] Demonstration of at least 3 functionalities during demo
-    - [ ] Conclusion (1 slide)
-    - [ ] References (1 slide)
-
 # How to Install/Run the Application
 * Download and extract the project onto your machine
 * Ensure you have the latest java version installed on your machine
